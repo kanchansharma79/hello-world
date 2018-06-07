@@ -1,0 +1,36 @@
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\MergeTrxFile.exe.config
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\SampleTrxFile\TrxFile.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\MergeTrxFile.exe
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\MergeTrxFile.pdb
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\obj\Debug\MergeTrxFile.csprojResolveAssemblyReference.cache
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\obj\Debug\MergeTrxFile.exe
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\obj\Debug\MergeTrxFile.pdb
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\SharedFramework_Config.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\LoggingAndSharedGenericMethods.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\Microsoft.VisualStudio.TestTools.UITesting.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\Microsoft.VisualStudio.TestTools.UITest.Extension.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\Microsoft.VisualStudio.TestTools.UITest.Common.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\UiaComWrapper.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\Interop.UIAutomationClient.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\LoggingAndSharedGenericMethods.pdb
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\LoggingAndSharedGenericMethods.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\Microsoft.VisualStudio.TestTools.UITesting.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\Microsoft.VisualStudio.TestTools.UITest.Extension.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\Microsoft.VisualStudio.TestTools.UITest.Common.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\TrxToHtml\XSLT.xslt
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\SampleTrxFile\Sample.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\TrxToHtml\page.xsl
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Debug\TrxToHtml\trx2html.css
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Debug\SampleTrxFile\Sample.xml
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Debug\SampleTrxFile\TrxFile.xml
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Debug\TrxToHtml\trx2html.css
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Debug\TrxToHtml\page.xsl
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Debug\TrxToHtml\CustomXSLT.xslt
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Debug\TrxToHtml\XSLT.xslt
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Debug\MergeTrxFile.exe.config
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Debug\MergeTrxFile.exe
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Debug\MergeTrxFile.pdb
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\obj\Debug\MergeTrxFile.csprojResolveAssemblyReference.cache
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\obj\Debug\MergeTrxFile.exe
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\obj\Debug\MergeTrxFile.pdb
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Debug\config\appsetting.config

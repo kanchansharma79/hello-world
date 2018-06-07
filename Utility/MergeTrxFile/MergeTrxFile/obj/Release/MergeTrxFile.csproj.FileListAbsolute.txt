@@ -1,0 +1,67 @@
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\MergeTrxFile.exe.config
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\SampleTrxFile\TrxFile.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\SharedFramework_Config.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\MergeTrxFile.exe
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\MergeTrxFile.pdb
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\LoggingAndSharedGenericMethods.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITesting.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITest.Extension.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITest.Common.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\UiaComWrapper.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Interop.UIAutomationClient.dll
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\LoggingAndSharedGenericMethods.pdb
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITesting.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITest.Extension.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITest.Common.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\obj\Release\MergeTrxFile.csprojResolveAssemblyReference.cache
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\obj\Release\MergeTrxFile.exe
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\obj\Release\MergeTrxFile.pdb
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\SampleTrxFile\Sample.xml
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\trx2html.css
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\page.xsl
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\XSLT.xslt
+D:\Learning\01_VSTS UI\Projects\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\CustomXSLT.xslt
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\MergeTrxFile.exe.config
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\obj\Release\MergeTrxFile.exe
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\obj\Release\MergeTrxFile.pdb
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\obj\Release\MergeTrxFile.csprojResolveAssemblyReference.cache
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\SampleTrxFile\Sample.xml
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\SampleTrxFile\TrxFile.xml
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\trx2html.css
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\page.xsl
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\CustomXSLT.xslt
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\XSLT.xslt
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\SharedFramework_Config.xml
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\MergeTrxFile.exe
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\MergeTrxFile.pdb
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITesting.dll
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITest.Extension.dll
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITest.Common.dll
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\UiaComWrapper.dll
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Interop.UIAutomationClient.dll
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITesting.xml
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITest.Extension.xml
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.UITest.Common.xml
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\config\conn.config
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\config\appsetting.config
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\config\email.config
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.TestAuto.dll
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.TeamFoundation.WorkItemTracking.Client.DataStoreLoader.dll
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Newtonsoft.Json.dll
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\System.Net.Http.Formatting.dll
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\System.Web.Http.dll
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.VisualStudio.TestTools.TestAuto.pdb
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\System.Net.Http.Formatting.xml
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\System.Web.Http.xml
+D:\Learning\Utility Projects\VSTS\Development\XMLSerializeDeSerialize\MergeTrxFile\MergeTrxFile\bin\Release\Microsoft.WITDataStore.dll
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Release\MergeTrxFile.exe.config
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\obj\Release\MergeTrxFile.exe
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\obj\Release\MergeTrxFile.pdb
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Release\SampleTrxFile\Sample.xml
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Release\SampleTrxFile\TrxFile.xml
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\trx2html.css
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\page.xsl
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\CustomXSLT.xslt
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Release\TrxToHtml\XSLT.xslt
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Release\MergeTrxFile.exe
+D:\Learning\Main\Utility\MergeTrxFile\MergeTrxFile\bin\Release\MergeTrxFile.pdb

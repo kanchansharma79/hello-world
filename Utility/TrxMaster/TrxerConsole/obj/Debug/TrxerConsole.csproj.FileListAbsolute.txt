@@ -1,0 +1,7 @@
+D:\Projects\GitHub\trxer-master\trxer-master\TrxerConsole\bin\Debug\TrxerConsole.exe.config
+D:\Projects\GitHub\trxer-master\trxer-master\TrxerConsole\bin\Debug\Trxer.xslt
+D:\Projects\GitHub\trxer-master\trxer-master\TrxerConsole\bin\Debug\TrxerConsole.exe
+D:\Projects\GitHub\trxer-master\trxer-master\TrxerConsole\bin\Debug\TrxerConsole.pdb
+D:\Projects\GitHub\trxer-master\trxer-master\TrxerConsole\obj\Debug\TrxerConsole.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\trxer-master\trxer-master\TrxerConsole\obj\Debug\TrxerConsole.exe
+D:\Projects\GitHub\trxer-master\trxer-master\TrxerConsole\obj\Debug\TrxerConsole.pdb

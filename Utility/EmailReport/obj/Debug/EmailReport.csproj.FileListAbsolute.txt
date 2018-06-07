@@ -1,0 +1,9 @@
+D:\Learning\Main\Utility\EmailReport\bin\Debug\config\conn.config
+D:\Learning\Main\Utility\EmailReport\bin\Debug\config\email.config
+D:\Learning\Main\Utility\EmailReport\bin\Debug\config\appsetting.config
+D:\Learning\Main\Utility\EmailReport\bin\Debug\EmailReport.exe.config
+D:\Learning\Main\Utility\EmailReport\bin\Debug\EmailReport.exe
+D:\Learning\Main\Utility\EmailReport\bin\Debug\EmailReport.pdb
+D:\Learning\Main\Utility\EmailReport\obj\Debug\EmailReport.csprojResolveAssemblyReference.cache
+D:\Learning\Main\Utility\EmailReport\obj\Debug\EmailReport.exe
+D:\Learning\Main\Utility\EmailReport\obj\Debug\EmailReport.pdb

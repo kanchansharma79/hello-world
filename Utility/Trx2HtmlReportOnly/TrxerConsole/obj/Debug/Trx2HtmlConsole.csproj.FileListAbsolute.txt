@@ -1,0 +1,10 @@
+D:\Learning\Main\Utility\Trx2HtmlReportOnly\TrxerConsole\bin\Debug\Trx2HtmlConsole.exe.config
+D:\Learning\Main\Utility\Trx2HtmlReportOnly\TrxerConsole\bin\Debug\Trx.xslt
+D:\Learning\Main\Utility\Trx2HtmlReportOnly\TrxerConsole\bin\Debug\EmailTrx.xslt
+D:\Learning\Main\Utility\Trx2HtmlReportOnly\TrxerConsole\bin\Debug\config\appsetting.config
+D:\Learning\Main\Utility\Trx2HtmlReportOnly\TrxerConsole\bin\Debug\Trx2HtmlConsole.exe
+D:\Learning\Main\Utility\Trx2HtmlReportOnly\TrxerConsole\bin\Debug\Trx2HtmlConsole.pdb
+D:\Learning\Main\Utility\Trx2HtmlReportOnly\TrxerConsole\obj\Debug\Trx2HtmlConsole.exe
+D:\Learning\Main\Utility\Trx2HtmlReportOnly\TrxerConsole\obj\Debug\Trx2HtmlConsole.pdb
+D:\Learning\Main\Utility\Trx2HtmlReportOnly\TrxerConsole\bin\Debug\Trx - Copy.xslt
+D:\Learning\Main\Utility\Trx2HtmlReportOnly\TrxerConsole\obj\Debug\Trx2HtmlConsole.csprojResolveAssemblyReference.cache

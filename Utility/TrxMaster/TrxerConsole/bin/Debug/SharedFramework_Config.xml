@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CustomConfig>
+  <Environment>
+    <Logging>
+      <CustomLogPath>\\cmp01-ksharma\SharedFiles\AutoLogs</CustomLogPath>
+    </Logging>
+    <AUT>
+      <BrowserUrl>$PROCESS:[ENVIRONMENTVARIABLE,AUTBrowserURL, http://cmp01-ksharma/dashboard/LoadTestSummary.aspx] </BrowserUrl>
+      <ApplicationUrl>$PROCESS:[ENVIRONMENTVARIABLE,AUTApplicationURL, http://cmp01-ksharma/dashboard/LoadTestSummary.aspx] </ApplicationUrl>
+      <SkipAUTLaunching>$PROCESS:[ENVIRONMENTVARIABLE,SkipAUTLaunching,false]</SkipAUTLaunching>
+      <LaunchCommandLine>$PROCESS:[ENVIRONMENTVARIABLE,AUTLaunchCommandLine,c:\dpbin\callperf.bat]</LaunchCommandLine>
+      <LoginUserName>$PROCESS:[ENVIRONMENTVARIABLE,AUTLoginUserName, Kanchan]</LoginUserName>
+      <LoginPassword>$PROCESS:[ENVIRONMENTVARIABLE,AUTLoginPassword, Kanchan]</LoginPassword>
+      
+      <SqlDatabase>
+        <Server>$PROCESS:[ENVIRONMENTVARIABLE,AUTSqlServer,ODA-L-011]</Server>
+        <Database>$PROCESS:[ENVIRONMENTVARIABLE,AUTSqlDatabase, AutomationReport]</Database>
+        <UserId>$PROCESS:[ENVIRONMENTVARIABLE,AUTSqlUserId, sa]</UserId>
+        <Password>$PROCESS:[ENVIRONMENTVARIABLE,AUTSqlPassword, admin123!]</Password>
+      </SqlDatabase>
+    </AUT>
+  </Environment>
+  
+  <CodeCoverage>
+    <InstrumentCodeCoverage>$PROCESS:[ENVIRONMENTVARIABLE,InstrumentCodeCoverage,false] </InstrumentCodeCoverage>
+    <CodeCoverageEnabled>$PROCESS:[ENVIRONMENTVARIABLE,CodeCoverageEnabled,false]</CodeCoverageEnabled>
+    <CodeCoverageEnabledPerTest>$PROCESS:[ENVIRONMENTVARIABLE,CodeCoverageEnabledPerTest,false]</CodeCoverageEnabledPerTest>
+    <GetBuildBinaries>$PROCESS:[ENVIRONMENTVARIABLE,GetBuildBinaries,false]</GetBuildBinaries> 
+
+    <CodeCoverageRegressionTolerancePercentage>$PROCESS:[ENVIRONMENTVARIABLE,CodeCoverageRegressionTolerancePercentage,5]</CodeCoverageRegressionTolerancePercentage>
+    <CodeCoverageNewMethodMinimumPercentage>$PROCESS:[ENVIRONMENTVARIABLE,CodeCoverageNewMethodMinimumPercentage,70]</CodeCoverageNewMethodMinimumPercentage>
+    
+    <ConsoleDebuggerDSNNetValue>$PROCESS:[ENVIRONMENTVARIABLE,ConsoleDebuggerDSNNetValue,Data Source=medpd-dellXYZ\performance;UID=QAMITCHELL;pwd=qanalyst1;Initial Catalog=DP_DB_XYZ]</ConsoleDebuggerDSNNetValue>
+ 
+    <SqlDatabase>
+      <Server>$PROCESS:[ENVIRONMENTVARIABLE,SqlServerCodeCoverage,AcsBuilds]</Server>
+      <Database>$PROCESS:[ENVIRONMENTVARIABLE,SqlDatabaseCodeCoverage, CodeCoverage]</Database>
+      <UserId>$PROCESS:[ENVIRONMENTVARIABLE,DbSqlUserIdCodeCoverage, QAMITCHELL]</UserId>
+      <Password>$PROCESS:[ENVIRONMENTVARIABLE,SqlPasswordCodeCoverage, qanalyst1]</Password>
+    </SqlDatabase>
+
+    <EndProcesses>
+      <PreProcess>MMPPOIEP, MMDataImporter, DecisionPoint,ConsoleDebugServer,VfPerfCmd,VfPerfMon,VSPerfReport,VsPerfMon, VsPerfSrv, MSBuild</PreProcess>
+      <PostProcess>MMPPOIEP, MMDataImporter, DecisionPoint,ConsoleDebugServer,MSBuild</PostProcess>
+    </EndProcesses>
+    
+    <FilesToInstrument>
+      <File>Administration.dll</File>
+      <File>AnalystCommon.dll </File>
+      <File>AnalystFactory.dll</File>
+      <File>AnalystHawaii.dll</File>
+      <File>AnalyzeBridge.dll</File>
+      <File>Bill.dll</File>
+      <File>Claim.dll</File>
+      <File>Claimant.dll</File>
+      <File>ClaimantTreatmentGuide.dll</File>
+      <File>ClaimWorkspace.dll</File>
+      <File>Common.Diagnostics.dll</File>
+      <File>Common.dll</File>
+      <File>CustomAttributes.dll</File>
+      <File>CustomValidators.dll</File>
+      <File>DataAccess.dll</File>
+      <File>DataAccessLogic.dll</File>
+      <File>DataFacade.dll</File>
+      <File>DecisionPoint.exe</File>
+      <File>Dp7BusinessObjects.dll</File>
+      <File>DPCommonControls.dll</File>
+      <File>DPControls.dll</File>
+      <File>DPLogon.dll</File>
+      <File>DPReports.dll</File>
+      <File>DPResources.dll</File>
+      <File>FormGenerator.dll</File>
+      <File>IEPLibrary.dll</File>
+      <File>IEPLibrary.dll</File>
+      <File>MMAnalyst.dll</File>
+      <File>MMBsSv32.dll</File>
+      <File>MMDataImporter.exe</File>
+      <File>MMDobj.dll</File>
+      <File>MMIEPMgr.exe</File>
+      <File>MMPPOIEP.exe</File>
+      <File>mmTrans32.dll</File>
+      <File>MyWorkspace.dll</File>
+      <File>ObjFactory.dll</File>
+      <File>PPOIEPConfig.exe</File>
+      <File>Provider.dll</File>
+      <File>ReportLibrary.dll</File>
+      <File>ServerProxy.dll</File>
+      <File>ServerState.dll</File>
+      <File>StateManagement.dll</File>
+      <File>Transport.dll</File>
+      <File>TransportLayer.dll</File>
+      <File>Validation.dll</File>
+      <File>WebAppGateway.dll</File>
+    </FilesToInstrument>
+
+    <Binaries>
+      <PathToBinaries>$PROCESS:[ENVIRONMENTVARIABLE,PerfPathToAppBinaries,C:\Program Files\DPIEP]</PathToBinaries>
+      <PathToBuildBinaries>$PROCESS:[ENVIRONMENTVARIABLE,PerfPathToBuildBinaries,\\medpd-dell6\E\DecisionPoint7x\Dev CI Combo\_Latest\SupportFiles\DP-IEP]</PathToBuildBinaries>
+      <PathToInstumentedBuildBinariesTBD>$PROCESS:[ENVIRONMENTVARIABLE,PathToInstumentedBuildBinaries,\\medpd-dell6\E\DecisionPoint7x\Dev CI Combo\_Latest\SupportFiles\DP-IEP]</PathToInstumentedBuildBinariesTBD>
+      <CodeCoverageBinariesFromLatestBuildDefinition>$PROCESS:[ENVIRONMENTVARIABLE,CodeCoverageBinariesFromLatestBuildDefinition,Unit Test DP CI]</CodeCoverageBinariesFromLatestBuildDefinition>
+    </Binaries>
+  </CodeCoverage>
+  <Tfs>
+    <TeamProjectUri>https://kanchansharmaqa.visualstudio.com/_projects/</TeamProjectUri>
+    <TfsUri>https://kanchansharmaqa.visualstudio.com/</TfsUri>
+    <TfsProject>Learning</TfsProject>
+    <TfsBuildDefinitions>QATestAutomation;FRCTestAutomation;WCSBuild</TfsBuildDefinitions>
+    <BranchPathToInclude>$/ACS/DecisionPoint/ContinuousIntegration</BranchPathToInclude>
+    <MaxDaysSinceBuildToRetrieveCoverageData>1</MaxDaysSinceBuildToRetrieveCoverageData>
+    <Checkins>
+      <GoBackHowManyDays>1</GoBackHowManyDays>
+    </Checkins>
+  </Tfs>
+</CustomConfig> 

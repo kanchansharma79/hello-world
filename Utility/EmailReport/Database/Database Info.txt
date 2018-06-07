@@ -1,0 +1,155 @@
+﻿Create a database with name 'AutomationReport'
+
+Then copy the code below in sql database and execute it
+
+/*****************************************Create table in database ************************************************************/
+
+USE [AutomationReport]
+GO
+
+/****** Object:  Table [dbo].[CuitReportHtml]    Script Date: 5/22/2018 1:02:46 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[CuitReportHtml](
+	[TrId] [int] IDENTITY(1,1) NOT NULL,
+	[WebReport] [varchar](max) NULL,
+	[EmailReport] [varchar](max) NULL,
+	[Creation] [varchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[TrId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [AutomationReport]
+GO
+
+/****** Object:  Table [dbo].[CuitReportFiles]    Script Date: 5/22/2018 1:03:01 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[CuitReportFiles](
+	[TrId] [int] NULL,
+	[WebReportFile] [varchar](256) NULL,
+	[EmailReportFile] [varchar](256) NULL,
+	[Creation] [varchar](255) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[CuitReportFiles]  WITH CHECK ADD FOREIGN KEY([TrId])
+REFERENCES [dbo].[CuitReportHtml] ([TrId])
+GO
+
+/*****************************************Create table in database ************************************************************/
+
+
+/*****************************************Get numbers from input parameter (Stored function )************************************************************/
+USE [AutomationReport]
+GO
+
+/****** Object:  UserDefinedFunction [dbo].[udf_GetNumeric]    Script Date: 5/22/2018 12:57:16 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE FUNCTION [dbo].[udf_GetNumeric]
+(@strAlphaNumeric VARCHAR(256))
+RETURNS VARCHAR(256)
+AS
+BEGIN
+DECLARE @intAlpha INT
+SET @intAlpha = PATINDEX('%[^0-9]%', @strAlphaNumeric)
+BEGIN
+WHILE @intAlpha > 0
+BEGIN
+SET @strAlphaNumeric = STUFF(@strAlphaNumeric, @intAlpha, 1, '' )
+SET @intAlpha = PATINDEX('%[^0-9]%', @strAlphaNumeric )
+END
+END
+RETURN ISNULL(@strAlphaNumeric,0)
+END
+
+GO
+/*****************************************Get numbers from input parameter (Stored function )************************************************************/
+
+/*****************************************Insert record in database (Stored Procedure )************************************************************/
+
+USE [AutomationReport]
+GO
+
+/****** Object:  StoredProcedure [dbo].[upStoreRunDetails]    Script Date: 5/22/2018 1:01:33 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE PROCEDURE [dbo].[upStoreRunDetails] 
+		@WebReport			varchar (max),
+		@WebReportFile		varchar (256),
+		@EmailReport		varchar (max),
+		@EmailReportFile	varchar(256),
+		@TimeStamp			varchar(256)	
+AS 
+BEGIN 
+     SET NOCOUNT ON 
+	 DECLARE @TrID	int
+	 INSERT INTO CuitReportHtml 
+	 ( 
+		 WebReport, 
+		 EmailReport, 
+		 Creation
+	 ) 
+	 VALUES 
+	 (
+		 @WebReport, 
+		 @EmailReport, 
+		 @TimeStamp
+	 ) 
+
+	 SET @TrID = SCOPE_IDENTITY();
+
+	 INSERT INTO CuitReportFiles 
+	 ( 
+		TrId,
+		WebReportFile, 
+		EmailReportFile, 
+		Creation
+	 ) 
+	 VALUES 
+	 (
+		 @TrID,
+		 @WebReportFile, 
+		 @EmailReportFile, 
+		 @TimeStamp
+	 ) 
+END 
+
+GO
+/*****************************************Insert record in database (Stored Procedure )************************************************************/

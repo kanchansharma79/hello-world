@@ -1,0 +1,2815 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.VisualStudio.TestTools.TestAuto</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods">
+            <summary>
+            Enables expanded logging beyond what is provided in ms unit testing framework. Also includes helper methods (dealing with sql, xml, perf profiling, generic ui...) that can be used in all projects.
+            </summary>
+            <summary>
+            Enables expanded logging beyond what is provided in ms unit testing framework. Also includes helper methods (dealing with sql, xml, perf profiling, generic ui...) that can be used in all projects.
+            </summary>
+            <summary>
+            Enables expanded logging beyond what is provided in ms unit testing framework. Also includes helper methods (dealing with sql, xml, perf profiling, generic ui...) that can be used in all projects.
+            </summary>
+            <summary>
+            Enables expanded logging beyond what is provided in ms unit testing framework. Also includes helper methods (dealing with sql, xml, perf profiling, generic ui...) that can be used in all projects.
+            </summary>
+            <summary>
+            Summary description for SharedMethods_Actions
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetRootDriveFromPath(System.String)">
+            <summary>
+            Get Root Drive From Path
+            </summary>
+            <param name="drivePath">drive path</param>
+            <returns>root drive</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.FindDirectory(System.String,System.String)">
+            <summary>
+            Gets directory array
+            </summary>
+            <param name="startPath"></param>
+            <param name="searchPattern"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WaitForFileAccess(System.String,System.Int32)">
+            <summary>
+            Waits for file to exist and be accessible
+            </summary>
+            <param name="strPathToFile">path to fail</param>
+            <param name="nMaxSecondsToWait">number of seconds to wait</param>
+            <returns>true if accessible else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WaitForFileAccess(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Waits for file to exist and be accessible
+            </summary>
+            <param name="strPathToFile">path to fail</param>
+            <param name="nMaxSecondsToWait">number of seconds to wait</param>
+            <param name="bIgNoreIfFileDoesntExist"></param>
+            <returns>true if accessible else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.AppendFileToFile(System.String,System.String,System.Boolean)">
+            <summary>
+            Appends the contents for the source file to the end of the destination file and optionally deletes the source file afterwards
+            </summary>
+            <param name="strPathToNewSourceFile">Path To Source File</param>
+            <param name="strPathToDestinationFile">Path T oDestination File</param>
+            <param name="bDeleteNewSource">if true deletes the source file after appending</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WaitForFileToExist(System.String,System.Int32,System.Int32)">
+            <summary>
+            Waits for a certain amount of time for a File To Exist
+            </summary>
+            <param name="strPathToFile">path to file</param>
+            <param name="nMillisecondsToWait">Max number of milliseconds to wait for file to appear</param>
+            <param name="nWaitIntervalsMs">Millisecond intervals to check if files exists</param>
+            <returns>true if file exists, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WaitForFileToExist(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Waits for specified amount of time for file to appear
+            </summary>
+            <param name="strPathToFile"></param>
+            <param name="nMaxSecondsToWait"></param>
+            <param name="logErrorIfNotFound">if true (default) logs error if file not found"></param>
+            <returns>true if file found else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckForTextInFile(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Checks if specifie text exists in specified file 
+            </summary>
+            <param name="strText">Text to search for in file</param>
+            <param name="strPathToFile">path to file</param>
+            <param name="bCaseSensitive">path to file</param>
+            <returns>true if text exists in file else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WaitForNewFileToAppear(System.String,System.String,System.DateTime,System.Int32,System.String)">
+            <summary>
+            Wait For file to be updated/appear
+            </summary>
+            <param name="strOutputNewFileName">Output FileName</param>
+            <param name="strOutputFolderPath">IEP Output Folder Path</param>
+            <param name="dtBefore">Datatime before creation of xml</param>
+            <param name="nMaxSecondsToWait">Max Seconds To Wait for file to appear, if value=-1 then we get the latest file</param>
+            <returns>true if file appears otherwise false</returns>
+            <remarks>Datetime is used to help determine appearance of the file because name of the file is randomly generated by IEP</remarks>
+            <remarks>used by MCN/ IEP test cases</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WriteToFile(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Writes text to file
+            </summary>
+            <param name="strText">test to write</param>
+            <param name="strPathToFile">path to file</param>
+            <param name="bAppend">If true: appends to existing file (if any). If false: or overwrites file (if any)</param>
+            <param name="bWriteLine">If true writes text to a new line else just adds</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.BackupDirectory(System.String,System.Boolean,System.Int32)">
+            <summary>
+            Backup a directory
+            </summary>
+            <param name="directoryPath">directory to backup</param>
+            <param name="checkForEmptyDirectory">If true, does backup only for non-empty folders</param>
+            <param name="numberOfAttemptsToMake">number Of Attempts To Make. This is used in case there are issues backing up on first attempt</param>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DeleteFilesInDirectory(System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Deletes files in specified directory
+            </summary>
+            <param name="sPathToDirectory"></param>
+            <param name="sFileSpecs"> e.g *.csv</param>
+            <param name="fileNames">List of specific files names to delete</param>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CopyFilesInDirectory(System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Copies files from a source directory to a destination directory.
+            </summary>
+            <param name="sourceDirName"></param>
+            <param name="destDirName"></param>
+            <param name="filesCopied">If not null, a list of file names will be appended to that were copied in this operation</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ReplaceTextInFile(System.String,System.String,System.String)">
+            <summary>
+            Replace specified text from file content
+            </summary>
+            <param name="sPathToFile">path to file</param>
+            <param name="sTextToBeReplaced">Text to be replaced</param>
+            <param name="sReplacementText">Replacement text</param>
+            <returns>Returns true if operation successful</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ReadTextInFile(System.String)">
+            <summary>
+            Reads the text in specified file 
+            </summary>
+            <param name="sPathToFile">path to file</param>
+            <returns>Returns the content of the file</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WaitForLatestFileToAppear(System.String,System.Int32,System.String)">
+            <summary>
+            Wait for Latest file to appear
+            </summary>
+            <param name="DirPath">Directory Path</param>
+            <param name="TimeOut">Max wait in miliseconds</param>
+            <param name="FileExtension">File extention</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsFileLocked(System.IO.FileInfo)">
+            <summary>
+            Check if the current file is locked by some other process or not.
+            </summary>
+            <param name="file">Xml file</param>
+            <returns>return false if file is not locked</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WaitUntilFileIsfree(System.String)">
+            <summary>
+            Wait until the file is getting unlocked
+            </summary>
+            <param name="filePath">Path of file</param>
+            <returns>return true if file is unlocked</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsDirectoryContainFiles(System.String,System.String)">
+            <summary>
+            Check if directory contains the valid number of files
+            </summary>
+            <param name="path">Directory Path</param>
+            <param name="limit">Limit of Files</param>
+            <returns>true if valid number of files found</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsControlClickable(Microsoft.VisualStudio.TestTools.UITesting.UITestControl)">
+            <summary>
+            Checks if specified control is Clickable
+            </summary>
+            <param name="uiControl">UI Control</param>
+            <returns>true if Clickable else false</returns>
+            <example><code>
+            bool bIsClickAble = IsControlClickable(uiClickableControl);
+            </code></example>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CollapseOrExpandControl(System.String,Microsoft.VisualStudio.TestTools.UITesting.UITestControl,Microsoft.VisualStudio.TestTools.UITesting.UITestControl,System.Boolean)">
+            <summary>
+            Collapse Or Expand specified Control and validates based on specified parameter
+            </summary>
+            <param name="strExpandOrCollapse">EXPAND or COLLAPSE</param>
+            <param name="uiExpandControl">UITestControl to expand or collapse</param>
+            <param name="uiClickableControl">UITestControl to check if clickable or not</param>
+            <param name="bOnlyClickIfNeeded">If true will only attempt to click if not already in requested state, if false will always attempt to click and check clickable state of control afterwards</param>
+            <returns>true if successful, false if not</returns>
+            <example>Below call will return true if Collapse succeede else false<code>
+            </code></example>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.LaunchBrowserApplication(System.String,System.Boolean)">
+            <summary>
+            Launch Browser Window
+            </summary>
+            <param name="strURI">URL to open</param>
+            <param name="bMinimizeAllAfterProcessStart">if true Minimize All After Process Start</param>
+            <returns>true if no errors encountered, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.LaunchBrowserWindow(System.String)">
+            <summary>
+            Launch BrowserW indow
+            </summary>
+            <param name="strURI">URL to open</param>
+            <returns>BrowserWindo Object if successfull, else null</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MenuClick(Microsoft.VisualStudio.TestTools.UITesting.UITestControl)">
+            <summary>
+            Clicks menu, used because Mouse.Click sometimes fails directly on control
+            </summary>
+            <param name="uiMenuItemTestControl">menu item</param>
+            <returns>true if no exceptions hit, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ClickWinCell(Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinCell,System.Windows.Forms.MouseButtons,System.Int32)">
+            <summary>
+            Clicks on specified WinCell
+            </summary>
+            <param name="wc">WinCell</param>
+            <param name="mbClick">MouseButtons</param>
+            <param name="nClickNumber">1=single click, 2=double click</param>
+            <returns>true if no issues, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MouseClick(Microsoft.VisualStudio.TestTools.UITesting.UITestControl)">
+            <summary>
+            Clicks with mouse, used because Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click sometimes fails directly on control, in particular if there are duplicates
+            </summary>
+            <param name="uiMenuItemTestControl">clickable item</param>
+            <returns>true if no exceptions hit, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SelectListBoxItem(System.String,Microsoft.VisualStudio.TestTools.UITesting.UITestControl)">
+            <summary>
+            Selects (mouse clicks) specified list box item, now wait time prior to nor ENTER after selection
+            </summary>
+            <param name="strListBoxItem"></param>
+            <param name="uiListBox"></param>
+            <returns>true if successful, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SelectListBoxItem(System.String,Microsoft.VisualStudio.TestTools.UITesting.UITestControl,System.Int32,System.Boolean)">
+            <summary>
+            Selects (mouse clicks) specified list box item, optionaly waits time prior selection and/or ENTER after selection
+            </summary>
+            <param name="strListBoxItem">listbox item to select</param>
+            <param name="uiListBox"></param>
+            <param name="nMaxWaitTime"></param>
+            <param name="bEnterAfterSelection">if true hits Enter after last selection</param>/// 
+            <returns>true if successful, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SelectTreeViewItem(System.String,Microsoft.VisualStudio.TestTools.UITesting.UITestControl)">
+            <summary>
+            Selects (mouse clicks) specified tree view item
+            </summary>
+            <param name="strTreeViewItem">treview item to select, may be delimited by ; to indicate hierarchy </param>
+            <param name="uiTreeView"></param>
+            <returns>true if successful, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SelectTreeViewItem(System.String,Microsoft.VisualStudio.TestTools.UITesting.UITestControl,System.Boolean,System.Int32)">
+            <summary>
+            Selects (mouse clicks) specified tree view item
+            </summary>
+            <param name="strTreeViewItem">single treeview item to select</param>
+            <param name="uiTreeView"></param>
+            <param name="bPartialMatch">if true search for partial match of specified string</param>
+            <param name="nDepthIndex">0 based index of item in tree, if >=0 search for item at specified level in tree</param>
+            <returns>true if successful, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SelectTreeViewItem(System.String,Microsoft.VisualStudio.TestTools.UITesting.UITestControl,System.Int32,System.Boolean)">
+            <summary>
+            Selects (mouse clicks) specified tree view item, optionaly waits time prior selection and/or ENTER after selection
+            </summary>
+            <param name="strTreeViewItem">treview item to select, may be delimited by ; to indicate hierarchy </param>
+            <param name="uiTreeView"></param>
+            <param name="nMaxWaitTime"></param>
+            <param name="bEnterAfterSelection">if true hits Enter after last selection</param>/// 
+            <returns>true if successful, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DoesTreeviewItemExist(Microsoft.VisualStudio.TestTools.UITesting.UITestControl,System.String,System.Int32)">
+            <summary>
+            Checks if specified item exists in the given treeview 
+            [**This method is not complete, as it doesn't cover specifying an item under a specified node in the treeview]
+            </summary>
+            <param name="uiTreeView">Treeview Control</param>
+            <param name="strTreeViewItem">Name of tree view item</param>
+            <param name="nMaxWaitTime">max amount of time to search for existence of item</param>
+            <returns>true if item exists, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DoesTreeviewItemExist(Microsoft.VisualStudio.TestTools.UITesting.UITestControl,System.Int32,System.String[])">
+            <summary>
+            DoesTreeviewItemExist
+            </summary>
+            <param name="uiTreeView">Treeview Control</param>
+            <param name="MaxWaitTimeInMilliSec">Max Wait Time In MilliSec</param>
+            <param name="NodesToSearchFor">Node(s) To Search For</param>
+            <returns>true if item exists, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetCurrentlySelectedTreeViewItem(Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinTreeItem)">
+            <summary>
+            Recursively finds the currently selected tree view Item
+            </summary>
+            <param name="searchTree">Tree to search</param>
+            <returns>The currently selected WinTreeItem, or NULL</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.PopulateUITestControl(Microsoft.VisualStudio.TestTools.UITesting.UITestControl,System.Xml.XmlNode,System.String,System.String)">
+            <summary>
+            Generic Method to populate UITestControls from an XML Node.  This is where ProcessTestData gets called
+            to convert the raw XML data to something more usable.
+            </summary>
+            <param name="testControl">Supports WinEdits, WinCheckBoxes, and WinComboBoxes.  (Expand this as needed)</param>
+            <param name="xmlNode">XML node which holds the data</param>
+            <param name="nodeName">If the xmlNode is a parent, the name of the child node.</param>
+            <param name="pathToXml">Physical location of the XML file.  Defaults to m_strAUT_PathToTestDataXml</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SelectItemInWindow(Microsoft.VisualStudio.TestTools.UITesting.UITestControl,System.String,Microsoft.VisualStudio.TestTools.UITesting.ControlType,System.Boolean)">
+            <summary>
+            SelectItemInWindow - Select individual target item from windows control 
+            </summary>
+            <remarks>This function takes the parent control and search for a target children control and access its items
+            function can be expandable to allow for different control types underneath the input 
+            </remarks>
+            <param name="UIParentControls">Window parent control where children controls exists.</param>
+            <param name="TargetItem">WinCheckbox item name</param>
+            <param name="TargetControlType">UITestControl controltype string</param>
+            <param name="ItemBoxChecked">True = checked; False = unchecked</param>
+            <returns>Returns true if Found; False otherwise</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SelectComboBoxItem(Microsoft.VisualStudio.TestTools.UITesting.UITestControl,System.String)">
+            <summary>
+            SelectComboBoxItem - Take a combobox control and search for the input param text to click
+            </summary>
+            <remakrs>no exact match for dropdown text is needed only part of the text </remakrs>
+            <param name="targetComboBox">combobox control</param>
+            <param name="dropDownTextToSelect">target string to match</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ClickRowOnDataGrid(Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinTable,Microsoft.VisualStudio.TestTools.UITesting.UITestControl)">
+            <summary>
+            ClickRowOnDataGrid - allow a UITestcontrol object that is a WinRow control be able to clicked under a DataGrid
+            </summary>
+            <param name="parentDataGrid">UITestControl object DataGridTable passed in </param>
+            <param name="targetRow">UITestControl WinRow object to be passed in for clicking</param>
+            <returns>true if no error clicking else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.releaseObject(System.Object)">
+            <summary>
+            This method releases interop services object
+            </summary>
+            <param name="obj">interop services object.</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CreateExcelFile(System.String,System.String)">
+            <summary>
+            This metod creates an excel file ate define path.
+            </summary>
+            <param name="fileName">New File Name to create.</param>
+            <param name="pathToFile">Path to save newly created excel file.</param>
+            <returns>full path to newly created file with file name</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetExcelRangeCount(System.String)">
+            <summary>
+            This method gets Excel range count
+            </summary>
+            <param name="excelFileLoc">Excel file location to get excecl range count.</param>
+            <returns>range count</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.LoadExcel(System.String,System.String)">
+            <summary>
+            loads Excel
+            </summary>
+            <param name="strPathToXLS"></param>
+            <param name="strWorksheetName"></param>
+            <returns>Excel Worksheet</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetExcelSheetNames(System.String,System.Boolean)">
+            <summary>
+            This mehtod retrieves the excel sheet names from 
+            an excel workbook.
+            </summary>
+            <param name="excelFile">The excel file.</param>
+            <param name="bRemoveSystemChars">if true remove system chars.</param>
+            <returns>String[]</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SetDataToExcel(System.String,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            This method sets data to defined excel sheet at defined cell.
+            </summary>
+            <param name="excelFileName">Excel file to update.</param>
+            <param name="worksheetIndex">Worksheet index to select and update. e.g. for "Sheet1" index=1</param>
+            <param name="valueToSet">value to set in excel file.</param>
+            <param name="rowIndex">row index.</param>
+            <param name="colIndex">column index.</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ExportToExcel(System.Data.DataTable@,System.String)">
+            <summary>
+            Export DataTable to Excel file
+            </summary>
+            <param name="DataTable">Source DataTable</param>
+            <param name="ExcelFilePath">Path to result file name</param>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_bReplaceProcessedWithValue">
+            <summary>
+            if true will replace xml entry with processed value in the case where value is processed
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_dictTestDataElementXPathMappings">
+            <summary>
+            stores repeating xml data root, used to help get/set values from data xml
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXPathValue(System.String,System.Int32,System.String)">
+            <summary>
+            Get values specified by XPath and Repeating Level
+            </summary>
+            <param name="strXPath"></param>
+            <param name="nRepeatingLevel"></param>
+            <param name="strPathToXml"></param>
+            <returns>Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXPathValue(System.String,System.Int32,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Get values specified by XPath and Repeating Level
+            </summary>
+            <param name="strXPath"></param>
+            <param name="nRepeatingLevel"></param>
+            <param name="strPathToXml"></param>
+            <param name="dictRepeatElementXPathMappings"></param>
+            <returns>Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DoesAttributeValueExist(System.String,System.String,System.String,System.String)">
+            <summary>
+            Checks if Attribute Value Exists
+            </summary>
+            <param name="strXPath"></param>
+            <param name="strAttributeName"></param>
+            <param name="strAttributeValue"></param>
+            <param name="strPathToXml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DoesAttributeValueExist(System.String,System.String,System.String,System.Xml.Linq.XDocument)">
+            <summary>
+             Checks if Attribute Value Exists
+            </summary>
+            <param name="strXPath">XPath</param>
+            <param name="strAttributeName">Attribute Name</param>
+            <param name="strAttributeValue">Attribute Value</param>
+            <param name="xDoc">XDocument</param>
+            <returns>true if exists esle false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetElementValue(System.Xml.Linq.XElement)">
+            <summary>
+            Gets XElement value
+            </summary>
+            <param name="xlElement">xlElement</param>
+            <returns>Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXmlValue(System.String,System.String)">
+            <summary>
+            Returns value of an XElement at a given xpath and the path to the xml file containing it
+            </summary>
+            <param name="strXPath"></param>
+            <param name="strPathToXml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXmlValue(System.Xml.Linq.XElement)">
+            <summary>
+            Returns value of an Element specified using an xElement
+            </summary>
+            <param name="xElement">xElement</param>
+            <returns>value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXmlValue(System.Xml.Linq.XElement,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Returns value of an Element specified using an xElement
+            </summary>
+            <param name="xElement">xElement</param>
+            <param name="strDefaultReturnValue"></param>
+            <param name="bShowExceptions"></param>
+            <param name="bTrimStartEndSpaces"></param>
+            <returns>value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXPathValue(System.String,System.Xml.XmlDocument)">
+            <summary>
+            Gets XPath value, handles cases with repeating elements
+            </summary>
+            <param name="sInputXpath"></param>
+            <param name="xmlInput">input xml</param>
+            <returns>tag value at xpath</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXPathValue(System.String,System.String)">
+            <summary>
+            Gets XPath value, handles cases with repeating elements
+            </summary>
+            <param name="sIEPInboundFilePath">path to input IEP file</param>
+            <param name="sInputXpath">input Xpath</param>
+            <param name="IsPPOIEP">if true special handling for PPOIEP case</param>
+            <returns>tag value at xpath</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXPathValue(System.String,System.String,System.Char,System.Xml.XmlDocument)">
+            <summary>
+            Gets XPath value, handles cases with repeating elements
+            </summary>
+            <param name="FilePath">path to input IEP file</param>
+            <param name="sInputXpath">input Xpath</param>
+            <param name="cDelimiter">xml tag delimiter, e.g. in the delimiter is '_' in following string: MMFILE_CLAIM_DATEOFLOSS</param>
+            <param name="xmlInput">input xml</param>
+            <returns>tag value at xpath</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SetXmlValue(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            Sets value of an XElement to specified value
+            </summary>
+            <param name="xElement">Xml Element</param>
+            <param name="strValue">value to set</param>
+            <returns>value </returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPath(System.String,System.String,System.String,System.Xml.XmlDocument,System.String)">
+            <summary>
+             MakeXPath, method handles repeating elements that use specified format, -# within the element name is used to indicate the repeating level of the element
+            </summary>
+            <param name="sIEPInboundFilePath"></param>
+            <param name="sInputXpath"></param>
+            <param name="sValueToBeUpdated"></param>
+            <param name="xDocFinalXml"></param>
+            <returns>true if no error encountered during call , else false</returns>
+            <remarks>xml element names must only contain -# to represent repeating element structure, using it in the name for other reasons will result in undetermined results, most likely failures</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPath(System.String,System.String,System.String,System.Char,System.String,System.Xml.XmlDocument)">
+            <summary>
+             MakeXPath, method handles repeating elements that use specified format, -# within the element name is used to indicate the repeating level of the element
+            </summary>
+            <param name="InputFilePath"></param>
+            <param name="sInputXpath"></param>
+            <param name="sValueToBeUpdated"></param>
+            <param name="cDelimiter"></param>
+            <param name="strRootElement"></param> 
+            <param name="xDocFinalXml"></param>
+            <returns>true if no error encountered during call , else false</returns>
+            <remarks>xml element names must only contain -# to represent repeating element structure, using it in the name for other reasons will result in undetermined results, most likely failures</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RemoveXmlRootNamespace(System.String,System.String,System.String@)">
+            <summary>
+            Remove Xml RootNamespace, typically used so that additions can be made to xml files that would otherwise fail due to namespace issues
+            </summary>
+            <param name="XmlFilePath">Path to xml file</param>
+            <param name="RootElementName">root element name e.g. MMFILE PPOIEPFILE</param>
+            <param name="RemovedNamespace">string containing root element along with any namespace/attributes it contains</param>
+            <returns>true if no errors else false</returns>
+            <remarks>RestoreXmlRootNamespace is typically called after any xml modifications so as to restore the namespaces/attributes</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RestoreXmlRootNamespace(System.String,System.String,System.String)">
+            <summary>
+            Restore Xml RootName space that was previously removed using RemoveXmlRootNamespace()
+            </summary>
+            <param name="XmlFilePath">Path to xml file</param>
+            <param name="RootElementName">root element name e.g. Root</param>
+            <param name="NamespaceToRestore">Namespace string to restore, typically obtained using RemoveXmlRootNamespace</param>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXmlValue(System.String,System.Xml.Linq.XDocument)">
+            <summary>
+            Returns value of an XElement at a given xpath and XDocument
+            </summary>
+            <param name="strXPath"></param>
+            <param name="xDoc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RemoveElement(System.String,System.Xml.XmlDocument,System.Boolean,System.Boolean)">
+            <summary>
+            Removes element specified in xpath
+            </summary>
+            <param name="xPath">xpath</param>
+            <param name="XmdDoc">xml doc</param>
+            <param name="bRemoveEmptyParents">if true reomves empty parents</param>
+            <param name="bIgnoreError">if true ignores any error</param>
+            <returns>true if no errors else false</returns>
+            <remarks>Uses default xpath delimiter m_cXpathDelimiter</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RemoveElement(System.String,System.Xml.XmlDocument,System.Boolean,System.Boolean,System.Char)">
+            <summary>
+            Removes element specified in xpath
+            </summary>
+            <param name="xPath"></param>
+            <param name="XmdDoc"></param>
+            <param name="bRemoveEmptyParents"></param>
+            <param name="bIgnoreError"></param>
+            <param name="cDelimter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RemoveElement(System.Xml.Linq.XElement,System.String,System.Boolean)">
+            <summary>
+            Removes specified XElement 
+            </summary>
+            <param name="xlParent"></param>
+            <param name="strChildElement"></param>
+            <param name="bIgnoreError"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetAttributeValue(System.Xml.Linq.XElement,System.String)">
+            <summary>
+            Gets Attribute Value, logs error on exception
+            </summary>
+            <param name="xElement">xElement</param>
+            <param name="strAttribute">Attribute</param>
+            <returns>Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetAttributeValue(System.Xml.Linq.XElement,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Gets Attribute Value, optionally logs error on exception
+            </summary>
+            <param name="xElement">xElement</param>
+            <param name="attributeName">attribute</param>
+            <param name="logErrorOnAttributeNotPresent">if true log Error when attribute not present</param>
+            <param name="bReturnEmptyStringIfNull">if true Returns Empty String If Null, defaul is false</param>
+            <returns>Attribute Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetAttributeValue(System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            GetAttributeValue
+            </summary>
+            <param name="strXPath">xpath</param>
+            <param name="strAttribute">attribute</param>
+            <param name="strPathToXml">path to xml file</param>
+            <param name="bLogErrorOnException">if true logs Error on exception</param>
+            <param name="bReturnEmptyStringIfNull">if true Returns Empty String If Null, defaul is false</param>
+            <returns>Attribute Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DoesXElementContain(System.Xml.Linq.XElement,System.Xml.Linq.XElement)">
+            <summary>
+            Checks if XElement 
+            </summary>
+            <param name="xelPartial">Partial xml</param>
+            <param name="xelContainer">Container xml</param>
+            <returns>true if xelPartial is found within xelContainer</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPath(System.Xml.XmlDocument,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Create xpath, extracts repeating level if any from end of string  
+            Expcts to be in _ separated format
+            Also trims of repeating index from xpath string
+            </summary>
+            <param name="xDoc"></param>
+            <param name="xPath"></param>
+            <param name="strValue"></param>
+            <param name="dictElementXPathMappings"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPath(System.Xml.XmlDocument,System.String,System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Create xpath
+            </summary>
+            <param name="xDoc"></param>
+            <param name="xPath"></param>
+            <param name="strValue"></param>
+            <param name="nLevel"></param>
+            <param name="dictElementXPathMappings"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPath(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            create xpath within specified xml
+            </summary>
+            <param name="strPathToOriginalXml"></param>
+            <param name="xPath"></param>
+            <param name="strValue"></param>
+            <param name="nLevel"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPath(System.Xml.XmlDocument,System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            create xpath
+            </summary>
+            <param name="xDoc"></param>
+            <param name="xPath"></param>
+            <param name="xPathChild"></param>
+            <param name="strValue"></param>
+            <param name="nLevel"></param>
+            <param name="nChildLevel"></param>
+            <param name="strPathToXmlOut"></param>
+            <param name="dictElementXPathMappings">Element XPath Mappings</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPath(System.Xml.XmlDocument,System.String,System.String,System.Int32,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            create xpath
+            </summary>
+            <param name="xDoc"></param>
+            <param name="xPath"></param>
+            <param name="strValue"></param>
+            <param name="nLevel"></param>
+            <param name="strPathToXmlOut"></param>
+            <param name="dictElementXPathMappings"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetClosestRepeatingXPath(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Get closest repeating xpath to given xpath
+            </summary>
+            <param name="strXPath"></param>
+            <param name="dictElementXPathMappings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXPathElementParent(System.String)">
+            <summary>
+            Get xpath parent of child
+            </summary>
+            <param name="strXPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXPathRelativeToRepeating(System.String,System.String)">
+            <summary>
+            Gets XPath value Relative To specified Repeating values
+            </summary>
+            <param name="strRepeatingXPath"></param>
+            <param name="strFullXPath"></param>
+            <returns>Relative xpath value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPathNode(System.String,System.String,System.String)">
+            <summary>
+            Makes xpath and sets value
+            </summary>
+            <param name="strXPath"></param>
+            <param name="strValue"></param>
+            <param name="strPathToXml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXPathWithoutRepeatingIndex(System.String)">
+            <summary>
+            Get's xpath value without repeating index value in order to be able to find in xsd
+            </summary>
+            <param name="strElementXPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTrueXPathWithoutRepeatingIndex(System.String,System.Int32@)">
+            <summary>
+            Used to get xpath from a string that was created using undescores as element seperators and an ending integer to indicate repeating value. 
+            This was used in original xls data files for QTP based IEP automation
+            </summary>
+            <param name="strUnderscoreXPath"></param>
+            <param name="nRepeatingIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetRepeatingIndexAfterUnderscore(System.String)">
+            <summary>
+            gets repeating index value (if used) from xpath
+            </summary>
+            <param name="strElementXPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXPathValue(System.String,System.Int32,System.Xml.Linq.XDocument,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Get values specified by XPath and Repeating Level
+            </summary>
+            <param name="strXPath"></param>
+            <param name="nRepeatingLevel"></param>
+            <param name="xDoc"></param>
+            <param name="dictRepeatElementXPathMappings"></param>
+            <returns>Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXPathValue(System.String,System.Int32,System.Xml.Linq.XDocument)">
+            <summary>
+            Get values specified by XPath and Repeating Level
+            </summary>
+            <param name="strXPath"></param>
+            <param name="nRepeatingLevel"></param>
+            <param name="xDoc"></param>
+            <returns>Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetAttributeValue(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets an Attribute Value given another attribute value under same xml tag
+            </summary>
+            <param name="xpath">e.g. ./appSettings/add</param>
+            <param name="unknownAttribute">value</param>
+            <param name="knownAttribute">key</param>
+            <param name="knownAttributeValue">BuildNumber</param>
+            <param name="pathToXmlFile"></param>
+            <returns>value of attribute</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetConfigAttributeValue(System.String,System.String,System.String)">
+            <summary>
+            Gets Config Attribute Value from a .config file
+            </summary>
+            <param name="strAttributeValue"></param>
+            <param name="strConfigElements">Element to get value from, e.g. appSettings</param>
+            <param name="strPathToConfigXml"></param>
+            <returns>Value of attribute if exists else null</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.InsertAnyMissingConfigKeys(System.Xml.XmlDocument,System.Xml.XmlElement,System.String,System.String)">
+            <summary>
+            Insert Any Missing ConfigKeys into .config file
+            </summary>
+            <param name="xmlTestConfigDoc"></param>
+            <param name="xmlappSettings"></param>
+            <param name="strConfigElements">Element to get value from, e.g. appSettings</param>
+            <param name="strPathToMMDataImporterConfigFile"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.InsertAnyMissingConfigKeysIntoDefaultSettings(System.String,System.String)">
+            <summary>
+            Insert Any Missing ConfigKeys into Default_Setting.xml config file based on values in live IEP config file 
+            to make sure we have all configs necessary for functioning
+            </summary>
+            <param name="sPathToMMDataImporterConfigFile"></param>
+            <param name="sPathToMMDataImporterDefaultSettingsXml"></param>
+            <remarks>Later in the test we will update the IEP config file with values in Default_settings.xml which will also include the values we just updated here</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SetConfigAttributeValue(System.String,System.String,System.String,System.String,System.String,System.Xml.Linq.XDocument)">
+            <summary>
+            Set Config Attribute Value in config file
+            </summary>
+            <param name="strXPath">XPath</param>
+            <param name="strConfigElements">ConfigElements</param>
+            <param name="strAttributeName">AttributeName</param>
+            <param name="strAttributeValue">AttributeValue</param>
+            <param name="strValueValue">Value</param>
+            <param name="xDoc">XDocument</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SetConfigAttributeValue(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Set Config Attribute Value in config file
+            </summary>
+            <param name="strXPath">XPath</param>
+            <param name="strConfigElement">Config Element</param>
+            <param name="strAttributeName">Attribute Name</param>
+            <param name="strAttributeValue">Attribute Value</param>
+            <param name="strValueValue">Value</param>
+            <param name="strPathToXml">path to xml</param>
+            <param name="strPathToSaveXml">path to save xml</param>
+            <param name="bSaveXmlAfterSet">if ture saves xml after setting</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTestData(System.String,System.Int32,System.String)">
+            <summary>
+            Gets test data from xml and processes it with bReplaceXmlValueWithProcessedValue=true
+            </summary>
+            <param name="strXPath"></param>
+            <param name="nRepeatingLevel"></param>
+            <param name="strPathToXml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ProcessTestData(System.String,System.String)">
+            <summary>
+            Processes test data
+            </summary>
+            <param name="strValue">Raw Test Data</param>
+            <param name="strPathToDataXml">Path To TestData Xml</param>
+            <returns>Processed Test Data to be used by Test</returns>
+            <remarks>
+            <para>$PROCESS: is used to indicate that the xml value is to be processed.</para><para>$PROCESS:[TODAY]=Todays date</para>
+            <para>$PROCESS:[MACHINENAME]=Machine Name where test is running</para>
+            <para>[TODAY:MM/DD/YYYY]: Today’s date without time, </para>
+            <para>[TODAY:YYYYMMDDHHMMSS]: Today’s raw date+time 4-digit year=20110624140359, </para>
+            <para>[TODAY:YYMMDDHHMMSS]: Today’s raw date+time 2-digit year=110624140359 </para>
+            <para>[TODAY,+] or [TODAY,-]: Today’s date without time incremented or decremented by SECONDS, MINUTES,HOURS,MONTHS, DAYS or YEARS. </para>
+            <para>[TODAY,+,&lt; formatString &gt;] or [TODAY,-,&lt; formatString &gt;]: Same as above but format string can be explicitly defined.</para>
+            <para>Sample xml fragments and processed values:</para>
+            <para>$PROCESS:AUTO-;[TODAY];-;[MACHINENAME]=AUTO-5/31/2011 9:32:52 AM-vpd3-wxp-002</para>
+            <para>$PROCESS:[TODAY:TIME]=9:32:52 AM</para>
+            <para>$PROCESS:[TODAY:MM/DD/YYYY]= 05/31/2011</para>
+            <para>$PROCESS:[TODAY,-21,YEARS]= 05/31/1990</para>
+            <para>PROCESS:[TODAY,+1,DAYS]= 06/01/2011</para> 
+            <para>$PROCESS:[SPACES,1] this is used when we just want to have spaces as the value to use, the integer value represents the number of spaces to use</para> 
+            <para>$PROCESS:[ENVIRONMENTVARIABLE,VariableName, DefaultValue] allows test to use values specified in environment variables when specified instead of the default</para>
+            <para>$PROCESS:[XPATH,xpath to some location data file] allows a data file to reference dynamic data from another section</para>
+            </remarks>
+            <example>Following are sample calls to GetTestData()<c>
+            <code>
+            GenericMethods.GetTestData("CustomConfig/TestData/NameOfTest/Test/SomeTestArea/SomeField",GenericMethods.m_nTestDataIndex, m_strAUT_PathToTestDataXml);
+            GenericMethods.GetTestData(GenericMethods.m_xpathTestDataRoot+"/SomeTestArea2/SomeField2",2, m_strAUT_PathToTestDataXml);
+            </code></c></example>
+            
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTestData(System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Gets test data from xml and processes it. If $PROCESS: is specified at start of xml value (note that this doesn't work with CDATA)
+            </summary>
+            <param name="strXPath">xPath to desired data</param>
+            <param name="nRepeatingLevel">m_TestIterationNum or can be specified explicitly= 1 if only one Test element entry exist in the test data xml, otherwise specify which entry to use matching the repeating index</param>
+            <param name="strPathToXml">Path to test data xml</param>
+            <param name="bReplaceXmlValueWithProcessedValue">if true and if $PROCESS: is specified then Replace Xml Value With Processed Value</param> 
+            <returns>Test Data to be used by test</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTestData(System.String,System.Boolean,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="XPath"></param>
+            <param name="TrimStartEndSpaces"></param>
+            <param name="PathToXml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTestData(System.String,System.String)">
+            <summary>
+            Get Test Data
+            </summary>
+            <param name="strXPath">XPath</param>
+            <param name="strPathToXml">Path to Xml file</param>
+            <returns>Test Data</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTestData(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Get Test Data
+            </summary>
+            <param name="strXPath">XPath</param>
+            <param name="strPathToXml">Path to Xml file</param>
+            <param name="bReplaceXmlValueWithProcessedValue">if true will replace xml value with processed value</param>
+            <param name="bReturNullAsEmptyString">if true will return null as empty string</param>
+            <returns>Test Data</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SetTestData(System.String,System.String,System.String)">
+            <summary>
+            Sets Test Data in xml file via xpath
+            </summary>
+            <param name="strXPath"></param>
+            <param name="strValue"></param>
+            <param name="strPathToXml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTestData(System.Xml.Linq.XElement)">
+            <summary>
+            Gets Test Data
+            </summary>
+            <param name="xElement">element containing test data</param>
+            <returns>Test Data</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTestData(System.Xml.Linq.XElement,System.Boolean,System.String)">
+            <summary>
+            Gets Test Data
+            </summary>
+            <param name="xElement">element containing test data</param>
+            <param name="bReplaceXmlValueWithProcessedValue">if true will replace xml value with processed value</param>
+            <param name="strPathToDataXml">Path to Xml file</param>
+            <returns>Test Data</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.UpdateXmlTagsToBeChanged(System.Xml.Linq.XElement,System.Xml.XmlDocument,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Xml.Linq.XDocument,System.String)">
+            <summary>
+            Updates xml tags that need to be changed
+            </summary>
+            <param name="xTestCases">Current Test Case</param>
+            <param name="xDocFinalXml">Test Document</param>
+            <param name="dstrDynamicTestCaseVariable">Dynamic Test Case Variable</param>
+            <param name="strPathToSourceXml">xml test case source</param>
+            <param name="xDocSourceXml">xdoc test case source</param>
+            <param name="strPathToFinalXml">if specified will update the actual xml</param>
+            <returns>true if no issues hit, else false</returns>
+            <remarks>Used by IEP and other test using data to drive updating of specified xml tags</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetNumberOfTestIndices">
+            <summary>
+            Returns the number of Test Indices found at the TestData.xml
+            </summary>
+            <returns>The number of Test Indices found at the TestData.xml</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXmlChildElements(System.Xml.Linq.XElement,System.Int32)">
+            <summary>
+            Gets Xml Child Elements
+            </summary>
+            <param name="xelParent">parent</param>
+            <param name="nIndex">index of element</param>
+            <returns>Child element</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXmlChildElements(System.String,System.Int32,System.String)">
+            <summary>
+            Gets Xml Child Elements
+            </summary>
+            <param name="strXpath">xpath</param>
+            <param name="nIndex">index of element</param>
+            <param name="strPathToXml">path to xml file</param>
+            <returns>Child element</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.NormalizeXml(System.Xml.Linq.XElement)">
+            <summary>
+            Normalize xml
+            </summary>
+            <param name="element"></param>
+            <returns>Normalized xml</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CreateXElmementFromXPath(System.String)">
+            <summary>
+            Create XElmement From XPath
+            </summary>
+            <param name="strXPath">XPath</param>
+            <returns>XPath</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ConvertXPathToXElement(System.String,System.Xml.Linq.XDocument)">
+            <summary>
+            Converts a specified xpath to an XElement
+            </summary>
+            <param name="strXPath">XPath</param>
+            <param name="xDoc">xDoc</param>
+            <returns>xElement corresponding to specified xpath</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.XToXmlDocument(System.Xml.Linq.XDocument)">
+            <summary>
+            Converts XDocument to XmlDocument
+            </summary>
+            <param name="xDocument">xDocument</param>
+            <returns>XmlDocument</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPath(System.Xml.XmlDocument,System.Xml.Linq.XElement,System.Int32,System.String)">
+            <summary>
+            create xpath
+            </summary>
+            <param name="xmlDoc">xml Doc</param>
+            <param name="xXmlParent">Xml Parent</param>
+            <param name="nLevel"></param>
+            <param name="strPathToXmlOut"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CreateDefaultDelimitedXmlDoc(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            CreateDefaultDelimitedXmlDoc
+            </summary>
+            <param name="strPathToNewXml">saves to file if path is not null or empty</param>
+            <param name="strDefaultTestDataXmlTag">element under the root where xpaths to be used to create xml are specified</param>
+            <param name="strXmlRoot">Root of the document</param>
+            <param name="strPathToTestDataFile"></param>
+            <param name="strPathToBaseTemplateXml">optional base template xml file, if null then xml file will be created from scratch using strXmlRoot as document root</param>
+            <param name="strDelimiter">optional delimiter, if no value specified then m_cXpathDelimiter will be used</param>
+            <returns>Complete XmlDocument</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.XmlToXDocument(System.Xml.XmlDocument)">
+            <summary>
+            Converts XmlDocument to XDocument
+            </summary>
+            <param name="xmlDocument">xmlDocument</param>
+            <returns>XDocument</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.InsertIntoXml(System.Xml.Linq.XDocument,System.Xml.Linq.XElement,System.String,System.String)">
+            <summary>
+            Inserts elements into Xml doc and optionally save the xml file (if provided)
+            </summary>
+            <param name="XDoc"></param>
+            <param name="xXmlToInsert"></param>
+            <param name="xPathParent"></param>
+            <param name="strPathToXmlOut"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetDbGlobalSettingsXml(System.String,System.String,System.String)">
+            <summary>
+            Returns xml for specifed id(s) ** Method is not complete, doesn't currently do anything just returns null xDoc **
+            </summary>
+            <param name="sGlobalId">GlobalIdNo single value, csv or All</param>
+            <param name="sPropertyId">Property id single value, csv or All</param>
+            <param name="sSqlConnectionString">sql ConnectionString to dp db</param>
+            <returns>xml combined from the 3 param columns</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetDbGlobalSettingsXml(System.Int32,System.Int32,System.String)">
+            <summary>
+            Returns xml for specifed ids
+            </summary>
+            <param name="nGlobalId">GlobalIdNo  value</param>
+            <param name="nPropertyId">Property id  value</param>
+            <param name="sSqlConnectionString">sql ConnectionString to dp db</param>
+            <returns>xml combined from the 3 param columns under GlobalSettings root tag</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetXmlRepeatingValues(System.String,System.String)">
+            <summary>
+            Get Xml Repeating Values
+            </summary>
+            <param name="strXPathToRepeatingElement">xpath to repeating element e.g. /root/someelement/somerepeatingdata</param>
+            <param name="strPathToXml">path to xml file</param>
+            <returns>List of values</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetChildrenOfRepeatingXPaths(System.String,System.String)">
+            <summary>
+            Get Children Of Repeating XPaths
+            </summary>
+            <param name="strRepeatingXPath"></param>
+            <param name="strFullXPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPathNode(System.Xml.XmlDocument,System.String)">
+            <summary>
+            Make xpath that returns XmlNode
+            </summary>
+            <param name="xDoc"></param>
+            <param name="xPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPathNode(System.Xml.XmlDocument,System.String,System.String)">
+            <summary>
+            Make xpath that returns XmlNode
+            </summary>
+            <param name="xDoc"></param>
+            <param name="xPath"></param>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.MakeXPathNode(System.Xml.XmlDocument,System.Xml.XmlNode,System.String)">
+            <summary>
+            Make xpath that returns XmlNode
+            </summary>
+            <param name="xDoc"></param>
+            <param name="xParent"></param>
+            <param name="xPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CreateAndUpdateNode(System.Xml.XmlDocument,System.Xml.XmlNode,System.String,System.Int32,System.Int32)">
+            <summary>
+            Create And Update specified xml node
+            </summary>
+            <param name="xDocFinalXml">out out xml</param>
+            <param name="xSelectedNode">selected node</param>
+            <param name="xPath">xpath</param>
+            <param name="iRepeatingIndex">repeating index</param>
+            <param name="iCurrentNodeCount">current node countd</param>
+            <returns>xml node</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SelectedXMLNode(System.Xml.XmlNode,System.String,System.String,System.Boolean,System.Xml.XmlNamespaceManager)">
+            <summary>
+            Selects a specified node 
+            </summary>
+            <param name="xSelectedNode">Currently selected xNode</param>
+            <param name="sNodeToSelect">Node to be selected</param>
+            <param name="sNodeIndex">Index of the node</param>
+            <param name="IsFirstElement">Is first element of the XML - parent node</param>
+            <param name="nsmgr">XmlNamespaceManager if not IEP</param>
+            <returns>Selected XML Node</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTestNodeList(System.String,System.String)">
+            <summary>
+            Returns the  XmlNodeList of an xml.  Working with test data this way can be more a little more efficient in that
+            the XmlDocument only gets loaded once (instead of once per data element retrieved.)  Use PopulateUITestControl
+            to populate the test control based on the data inside the node.
+            </summary>
+            <param name="xPath">XML path to the parent node.</param>
+            <param name="pathToXml">Physical location of the XML file</param>
+            <returns>List of Nodes that can be iterated through.</returns>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DefaultSqlExecutionTimeout">
+            <summary>
+            Default sql execution Timeout
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DefaultSqlConnectionString">
+            <summary>
+            Default sql connection string
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetSqlConnectionString">
+            <summary>
+            Gets SqlConnectionString based on settings in Test Config xml
+            </summary>
+            <returns>SqlConnectionString</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetNextID(System.String,System.String)">
+            <summary>
+            Gets next id as specified in query
+            </summary>
+            <param name="strSql">sql query to get distinct list of ids</param>
+            <param name="sqlConnection">sql connection</param>
+            <returns>next id</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetNextID(System.String,System.String,System.Boolean)">
+            <summary>
+            Gets next id as specified in query
+            </summary>
+            <param name="strSql">sql query to get distinct list of ids</param>
+            <param name="sqlConnection">sql connection</param>
+            <param name="bSqlCe">if true means were getting data from a sql ce db </param>/
+            <returns>next id</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.QuerySQLCountCe(System.String,System.String)">
+            <summary>
+            Gets count of items returned by query - sql ce
+            </summary>
+            <param name="strSQL"></param>
+            <param name="strConnection"></param>
+            <returns>count of items</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.QuerySQLCount(System.String,System.String)">
+            <summary>
+            Gets count of items returned by query
+            </summary>
+            <param name="strSQL"></param>
+            <param name="strConnection"></param>
+            <returns>count of items</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.QuerySQLValue(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Queries a single value from given db
+            </summary>
+            <param name="strValue">Column to query value from</param>
+            <param name="strConnection">WHERE clause</param>
+            <param name="bValidate">if true will default return value to null else empty string</param>
+            <param name="bConcatValues">if true will concatenate all values returned</param>
+            <returns>Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.QuerySQLValue(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Queries a single value from given db
+            </summary>
+            <param name="strValue">Column to query value from</param>
+            <param name="strTable">Table to query value from, if null then it means query string doesn't need any building, i.e. it's already complete</param>
+            <param name="strWHERE">Where condition</param>
+            <param name="strConnection">WHERE clause</param>
+            <param name="bValidate">if true will default return value to null else empty string</param>
+            <param name="bConcatValues">if true will concatenate all values returned</param>
+            <returns>Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.QuerySQLValue(System.String,System.String)">
+            <summary>
+            Queries a single value from given db
+            </summary>
+            <param name="strSqlQuery">sql query</param>
+            <param name="strConnection">sql connection string</param>
+            <returns>value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.QuerySQLValueCe(System.String,System.String)">
+            <summary>
+            Queries a single value from given ce db
+            </summary>
+            <param name="strSQLquery">sql query</param>
+            <param name="strConnection">WHERE clause</param>
+            <returns>Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ExecuteSQLCe(System.String,System.String)">
+            <summary>
+            ExecuteSQL (ExecuteNonQuery) sql ce
+            </summary>
+            <param name="strSQL">sql to executwe</param>
+            <param name="strConnection">Connection string</param>
+            <returns>Number of rows affected</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ExecuteSQL(System.String,System.String,System.Int32)">
+            <summary>
+            ExecuteSQL (ExecuteNonQuery)
+            </summary>
+            <param name="strSQL">sql to executwe</param>
+            <param name="strConnection">Connection string</param>
+            <param name="nCommandTimeout">Time out, specifying 0 will use default</param>
+            <returns>Number of rows affected</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.InsertIntoSqlCe(System.String,System.String,System.Boolean)">
+            <summary>
+            Inserts values into SQL ce table
+            </summary>
+            <param name="strSQL">Insert into command</param>
+            <param name="strConnection">Connection string</param>
+            <param name="bScopeIdentity">if true will return indentity</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.InsertIntoSQL(System.String,System.Boolean,System.String)">
+            <summary>
+            Inserts values into SQL table
+            </summary>
+            <param name="strSQL">Insert into command</param>
+            <param name="bScopeIdentity">if true will return indentity</param>
+            <param name="strConnection">Connection string</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ExecuteStoredProc(System.String,System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter})">
+            <summary>
+            Call to Database StoredProcedure with or without Parameters (List(SqlParameter) paramList = null)
+            </summary>
+            <param name="storedProcName">stored Proc Name</param>
+            <param name="connectionString">sql connection string</param>
+            <param name="paramList">list of params</param>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.QuerySQLMultiSelectValues(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Queries Multiple values from given db
+            </summary>
+            <param name="strValues">Columns to query value from, delimited by ,</param>
+            <param name="strTable">Table to query value from</param>
+            <param name="strWHERE">Where condition</param>
+            <param name="strConnection">ql connection string</param>
+            <param name="timeout">timeout to use</param>
+            <returns>array list of values</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.QuerySQLValues(System.String,System.String,System.String,System.String,System.Boolean,System.Int32)">
+            <summary>
+            Queries all values returned for a single column
+            </summary>
+            <param name="strValue">Column to query value from</param>
+            <param name="strFromTable">Table to query value from, if null then it means query string doesn't need any building, i.e. it's already complete</param>
+            <param name="strWHERE">Where condition</param>
+            <param name="strConnection">sql connection string</param>
+            <param name="bDontReturnNullOrEmptyValues"></param>
+            <param name="timeout">timeout to use</param>
+            <returns>Values</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.QuerySQLValuesCe(System.String,System.String,System.Boolean)">
+            <summary>
+            Queries all values returned for a single column from a sql ce db
+            </summary>
+            <param name="strSql">sql query</param>
+            <param name="strConnection">sql connection string</param>
+            <param name="bDontReturnNullOrEmptyValues"></param>
+            <returns>Values</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetDataSet(System.String)">
+            <summary>
+            Gets Data Set
+            </summary>
+            <param name="sqlQuery">sql query </param>
+            <returns>resulting dataset</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.QuerySQLResult(System.String,System.String)">
+            <summary>
+            Queries all values returned for a single command
+            </summary>
+            <param name="strSQLquery">Query to be sent</param>
+            <param name="strConnection">sql connection string</param>
+            <returns>Results in DataTable type</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CreateDataTable(System.String,Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.TypeOfTypes[])">
+            <summary>
+            Creates a DataTable with given column name and data types
+            </summary>
+            <param name="columnNamesHyphenSeperated">Column names seperated by Hyphen</param>
+            <param name="typeOfTypes">Define Data types of each column</param>
+            <returns>returns a data table</returns>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GenericMethods">
+            <summary>
+            to be used by shared libraries
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.#ctor">
+            <summary>
+            Logging and Sharing constructor
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_nDefaultSearchWaitTimeout">
+            <summary>
+            Default time UITestControl searches are performed, default=120 seconds
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_sDefaultXmlDocRootElement">
+            <summary>
+            Default XmlDoc Root Element, e.g. Default in tests, can be set to other values if needed
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.LogTestContext">
+            <summary>
+            Test Context to test case currently executing. 
+            Value gets set via TestContext property
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_cXpathDelimiter">
+            <summary>
+            xPath delimiter
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_dsDynamicTestCaseVariable">
+            <summary>
+            dictionary that can be shared among libraries
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_nExpectedPassCount">
+            <summary>
+            Expected Pass Count, may be set at start of test, default is UndefinedExpectedResultCount
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.UndefinedExpectedResultCount">
+            <summary>
+            Used to indicate that the number of expected results is undefined
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_bAllTestActionsCompleted">
+            <summary>
+            In indicates if all TestActionsCompleted were completed, the initial value is true and the test script methods can be used to set this to false and then handle as appropriate
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_nExpectedFailCount">
+            <summary>
+            Expected Fail Count, may be set at start of test, default is 0
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_strAUT_PathToTestConfig_Common">
+            <summary>
+            Path To common TestConfig file used in the test = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_strAUT_TestConfig_CommonFileName">
+            <summary>
+            Name of common TestConfig file
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_sAUT_PathToTestOutFolder">
+            <summary>
+            Path to test output folder
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_strAUT_PathToTestDataXml">
+            <summary>
+            Path to Test Data xml to be used by the test
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_DataDrivenTestIterationCount">
+            <summary>
+            Current iteration of the <TestCases></TestCases> tag In a data driven test. 
+            Value is automatically updated framework
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_nTestDataIndex">
+            <summary>
+            Iteration/index within a test case i.e. within which index of the <test></test> tag we are currently in. 
+            Value needs to be set by logic in the test
+            </summary>
+            <remarks>Default initial value=1</remarks>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_AUT_nTestDataIndex">
+            <summary>
+            Iteration/index within a test case i.e. within which index of the <test></test> tag we are currently in. 
+            Value needs to be set by logic in the test
+            </summary>
+            <remarks>Default initial value=1</remarks>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckAreEqual">
+            <summary>
+            Checks if values are equal
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckAreEqualNC">
+            <summary>
+            Checks if strings are equal not case sensitive
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckAreListsEqual">
+            <summary>
+            Checks if lists are equal
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckAreNotEqual">
+            <summary>
+            Checks if values are NOT equal
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckActualIsGreater">
+            <summary>
+            Checks if Actual value is greater than expected
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckActualIsGreaterOrEqual">
+            <summary>
+            Checks if Actual value is greater or equal than expected
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckAreNotSame">
+            <summary>
+            Checks that values are not the same
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckAreSame">
+            <summary>
+            Checks that values are the same
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckActualIsNotNullOrEmpty">
+            <summary>
+            Check that actual value is NOT null
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckActualIsNullOrEmpty">
+            <summary>
+            Check that actual value is NOT null
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckActualIsNotNull">
+            <summary>
+            Check that actual value is NOT null
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckActualIsNull">
+            <summary>
+            Check that actual value is null
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckActualContainsExpected">
+            <summary>
+            Checks that value in Expected also exists within Actual
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckExpectedContainsActual">
+            <summary>
+            Checks that value in Actualalso exists within Expected 
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_xpathTestDataRoot">
+            <summary>
+            xpath to Test Data Root, currently set at the start of the test as = "CustomConfig/TestData/" + LogTestContext.TestName+ "/"
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_AUT_xpathTestDataRoot">
+            <summary>
+            xpath to Test Data Root, currently set at the start of the test as = "CustomConfig/TestData/" + LogTestContext.TestName+ "/"
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_strTestCommonElement">
+            <summary>
+            Element name to Common Test Data
+            </summary>
+            <remarks>Can overwrite value used in test script by setting to custom value prior to call to start logging</remarks>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_strTestElement">
+            <summary>
+            Element name to Test Data
+            </summary>
+            <remarks>Can overwrite value used in test script by setting to custom value prior to call to start logging</remarks>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_xpathTestCommonDataRoot">
+            <summary>
+            xpath to Common Test Data Root, currently set at the start of the test as = "CustomConfig/TestData/" + m_strTestCommonElement+ "/"
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Allows for non automated tests to use use libraries more easily
+            </summary>
+            <param name="appType">APP is currently only supported option</param>
+            <param name="commandLine">Apps command line may also be used to override app log name</param>
+            <param name="customConfig">custom config file name</param>
+            <param name="sharedConfig">shared config file name</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.Validate(System.String,System.String,System.Boolean)">
+            <summary>
+            Validates (Pass or Fail) via single boolean value, no screen capture after a fail
+            </summary>
+            <param name="strTestCaseName"></param>
+            <param name="strTestCaseDescription"></param>
+            <param name="bSuccess">true if pass else false</param>
+            <returns>true of validation passed, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ValidateInteractive(System.String,System.String)">
+            <summary>
+            Used for semi-automated tests cases where a visual validation is required to determine success or failure of tests cases
+            </summary>
+            <param name="strTestCaseName">Test Case Name</param>
+            <param name="strTestCaseDescription">Test Case Description</param>
+            <returns>true if test passed else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.Validate(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Validates (Pass or Fail) via single boolean value, optionaly captures screen after a fail
+            </summary>
+            <param name="strTestCaseName"></param>
+            <param name="strTestCaseDescription"></param>
+            <param name="bSuccess">true if pass else false</param>
+            <param name="bCaptureScreenOnFail"></param>
+            <returns>true of validation passed, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.Validate(System.String,System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Validates (Pass or Fail) expected vs actual value, no screen capture after fail.
+            </summary>
+            <param name="strTestCaseName">Name of Test Case</param>
+            <param name="strTestCaseDescription">Test Case description, if null only failures will be logged, success will be marked as INFO</param>
+            <param name="strComparisonType">Type of comparison to make</param>
+            <param name="objExpected">Expected value</param>
+            <param name="objActual">Actual value</param>
+            <returns>true if pass else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.Validate(System.String,System.Boolean)">
+            <summary>
+            Validates (Pass or Fail) via single boolean value, no screen capture after a fail.Test-Case Name will be obtained through stack trace.
+            </summary>
+            <param name="strTestCaseDescription"></param>
+            <param name="bSuccess">true if pass else false</param>
+            <returns>true of validation passed, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.Validate(System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Validates (Pass or Fail) expected vs actual value, no screen capture after fail.Test-Case Name will be obtained through stack trace. 
+            </summary>
+            <param name="strTestCaseDescription">Test Case description, if null only failures will be logged, success will be marked as INFO</param>
+            <param name="strComparisonType">Type of comparison to make</param>
+            <param name="objExpected">Expected value</param>
+            <param name="objActual">Actual value</param>
+            <returns>true if pass else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.Validate(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean)">
+            <summary>
+            Validate to compare dictionaries of strings
+            </summary>
+            <param name="strTestCaseName"></param>
+            <param name="strTestCaseDetails"></param>
+            <param name="dictExpected"></param>
+            <param name="dictActual"></param>
+            <param name="bCaptureScreenOnFail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.Validate(System.String,System.String,System.String,System.Object,System.Object,System.Boolean)">
+            <summary>
+            Validates (Pass or Fail) expected vs actual value, optionaly captures screen after a fail
+            </summary>
+            <param name="strTestCaseName">Name of Test Case</param>
+            <param name="strTestCaseDescription">Test Case description, if null only failures will be logged, success will be marked as INFO</param>
+            <param name="strComparisonType">Type of comparison to make</param>
+            <param name="objExpected">Expected value</param>
+            <param name="objActual">Actual value</param>
+            <param name="bCaptureScreenOnFail">if true captures screen when a failure is logged</param>
+            <returns>true of validation passed, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CompareResults(System.String,System.String,System.String,System.String,System.Int32@,System.Int32@,System.String@)">
+            <summary>
+            Compares and groups results 
+            </summary>
+            <param name="strTestName"></param>
+            <param name="strTestCase"></param>
+            <param name="strExpectedResult"></param>
+            <param name="strActualResult"></param>
+            <param name="nNumberOfTestMatches"></param>
+            <param name="nNumberOfTestDiffs"></param>
+            <param name="strTestResultDiffDescription"></param>
+            <returns>true of validation passed, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CompareResults(System.String,System.String,System.String,System.String,System.Int32@,System.Int32@,System.String@,System.Boolean,System.Boolean)">
+            <summary>
+            Compares and groups results, optionally allows to Treat Nulls, Spaces And Empty equal strings as equal, also allows equivalent numbers to be equal
+            </summary>
+            <param name="strTestName"></param>
+            <param name="strTestCase"></param>
+            <param name="strExpectedResult"></param>
+            <param name="strActualResult"></param>
+            <param name="nNumberOfTestMatches"></param>
+            <param name="nNumberOfTestDiffs"></param>
+            <param name="strTestResultDiffDescription">if true treats null, NULL or empty strings as equal, also treats equivalent numbers as equal e.g. 1.0 and 1.000</param>
+            <param name="bTreatNullsSpacesAndEmptyAsDiffsOrEquivalentNumbers">if true Treat Nulls, Spaces, And Empty As Diffs Or Equivalent Numbers</param>
+            <param name="checkForActualContainsExpected">if true check whether Actual Contains Expected</param>
+            <returns>true of validation passed, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.AppendAreaNameToTxtLogName(System.String)">
+            <summary>
+            AppendAreaNameToTxtLogName, mainly used in data driven tests in order to help distinguish between log files
+            </summary>
+            <param name="strPathToTestAreaName"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WriteLog(System.String)">
+            <summary>
+            Overload used for writing informational logs
+            </summary>
+            <param name="strMessage"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WriteLog(System.String,System.String)">
+            <summary>
+            Used for writing informational (non-pass/fail) logs, no screen capture after ERROR
+            </summary>
+            <param name="strMessage">Message to log</param>
+            <param name="strLogType">if ERROR then error count is incremented</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WriteLog(System.String,System.String,System.Boolean)">
+            <summary>
+            Used for writing informational (non-pass/fail) logs, optionally captures screen on ERROR
+            </summary>
+            <param name="strMessage">Message to log</param>
+            <param name="strLogType">if ERROR then error count is incremented</param>
+            <param name="bCaptureScreen">if true then screen capture will be saved</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CaptureScreen">
+            <summary>
+            Captures the image of the desktop and stores it in the TestRunDirectory for the given test
+            Used to help debug failures having to do with UI controls
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetCustomLogPath(System.String)">
+            <summary>
+            Gets path to custom logging path
+            </summary>
+            <param name="strPathToConfigFile">Path to config file</param>
+            <returns>path to custom logging path</returns>
+            <remarks>xpath to custom logging path=//CustomConfig/Environment/Logging/CustomLogPath</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.StartTest(System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets called at start of Test and initializes pass/fail/error counts
+            </summary>
+            <param name="nExpectedPassCount">Expected Pass Count</param>
+            <param name="nExpectedFailCount">Expected Fail Count</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetEmbeddedResourceFileText(System.String)">
+            <summary>
+            Reads text from an embedded resource file
+            </summary>
+            <param name="filename">name of resource file</param>
+            <returns>text from resource file</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetResourceFile(System.String,System.Boolean)">
+            <summary>
+            check if resource file exists xml exists already (i.e.  externaly), if not then create from embeded resource
+            </summary>
+            <param name="pathToSharedCommonConfig"></param>
+            <param name="replaceIfFileExists"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SetExecutionConfigValues(System.String,System.String,System.String,System.String)">
+            <summary>
+            Sets dynamic values to be used during test execution
+            </summary>
+            <param name="testConfigXml">Test Config Xml to be used by the test</param>
+            <param name="testDataXml">Test Data Xml to be used by the test</param>
+            <param name="testName">Test Name</param>
+            <param name="sharedFrameworkConfig">Name of config file, if null then default file will be used</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.StartTest(System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+             Gets called at start of Test and initializes pass/fail/error counts
+            </summary>
+            <param name="nExpectedPassCount">Expected Pass Count</param>
+            <param name="nExpectedFailCount">Expected Fail Count</param>
+            <param name="bSplitLogsPerArea">Split Logs Per Area</param>
+            <param name="strTestConfigXml">(optional) If specified Name of TestConfig xml to be used</param>
+            <param name="strTestDataXml">(optional) If specified Name of TestData xml to be used</param>
+            <param name="strTestDataChildElement">(optional) If specified Name of child element to TestData under CustomConfig/TestData (originally=default)</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.StartTest(System.String,System.String)">
+            <summary>
+            Gets called at start of Test and initializes pass/fail/error counts. Expected Pass is undefined, expected fail=0 and log files are not split.
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.StartTest(System.Boolean,System.String,System.String)">
+            <summary>
+            Gets called at start of Test and initializes pass/fail/error counts, Expected Pass is undefined, expected fail=0
+            </summary>
+            <param name="bSplitLogsPerArea">used with data driven tests, if true log files will be split for each data driven test</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.EndTest">
+            <summary>
+            Gets called at end of test to summarize results and log whether it passed/or not
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsThisWeekEnd(System.DateTime)">
+            <summary>
+            Returns true if the day of the week is Saturday or Sunday.
+            </summary>
+            <param name="CheckDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsThisHoliday(System.DateTime)">
+            <summary>
+            Returns true if the date passed is holiday. 
+            </summary>
+            <param name="CheckDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsThisHolidayReplacementDay(System.DateTime)">
+            <summary>
+            Returns true if date passed is ReplacementDayHoliday
+            Interest will be calculated accordingly.
+            </summary>
+            <param name="CheckDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DateDiff(Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DateInterval,System.DateTime,System.DateTime)">
+            <summary>
+            Gives the difference between two date intervals based on the interval type (i.e. day, hour, minute etc).
+            </summary>
+            <param name="intervalType"></param>
+            <param name="dateOne"></param>
+            <param name="dateTwo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ClearAndFillTextBox(Microsoft.VisualStudio.TestTools.UITesting.UITestControl,System.String)">
+             <summary>Enters Text in desired control .
+             <param name="textBox">control to enter text</param>
+             <param name="value">text to be entered</param>
+            </summary>     
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.InvokeUiMapAccessKey(System.String)">
+            <summary>
+            Invokes the AccessKey from the specifed UIMap
+            </summary>
+            <param name="uiMapAccessKey">uiMap access key e.g. "ALT+K"</param>
+            <returns>true if no error else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ExportValuesFromDataGridView(System.Windows.Forms.DataGridView,System.String)">
+            <summary>
+            Exports values from DataGridView to excel csv formatted file
+            </summary>
+            <param name="gridView">DataGridView</param>
+            <param name="pathToExportFile">Path to file that will be exported to</param>
+            <returns>true if no errors encountered else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CreateDateTimeAppendedString(System.String)">
+            <summary>
+            Creates a string that has datetime appended to it
+            </summary>
+            <param name="strOriginalString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetDateTimeString">
+            <summary>
+            Gets DateTime String, normally used to create a unique filename/claimnumber...
+            </summary>
+            <returns>datetime string:  YYYYMMDDHHmmSS e.g. 20121022145757</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetDateTimeString(System.String)">
+            <summary>
+            Gets DateTime String, normally used to create a unique filename/claimnumber...
+            </summary>
+            <param name="strFormat">Format to use YYMMDDHHMMSS and HHMMSS are currently supported formats</param>
+            <returns>datetime string</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTotalTimeBetweenDates(System.String,System.String,System.String)">
+            <summary>
+            Get Time Between Dates
+            </summary>
+            <param name="strOlderDate"></param>
+            <param name="strNewerDate"></param>
+            <param name="strTimeType_d_h_m_s"></param>
+            <returns>time in format specified, for failures returns -999999</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTimeBetweenDates(System.String,System.String,System.String)">
+            <summary>
+            Get Time Between Dates
+            </summary>
+            <param name="strOlderDate"></param>
+            <param name="strNewerDate"></param>
+            <param name="strTimeType_d_h_m_s"></param>
+            <returns>time in format specified, for failures returns -999999</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTimeBetweenDates(System.String,System.String)">
+            <summary>
+            Get Time Between Dates in days and hours
+            </summary>
+            <param name="strOlderDate"></param>
+            <param name="strNewerDate"></param>
+            <returns>in days and hours, for failures returns null</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetDateTime(System.String,System.String)">
+            <summary>
+            Gets datetime from string
+            </summary>
+            <param name="sDateTimeString">DateTime String</param>
+            <param name="sDateFormat">DateFormat</param>
+            <returns>DateTime</returns>
+            <remarks>Used to handle errors hit by parse and to handle cases where datetime specified is not in standard DateTime format but valid e.g. IEP has a datetime format that's not parsable</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsInteger(System.String)">
+            <summary>
+            Checks if specified string is an integer
+            </summary>
+            <param name="strValue"></param>
+            <returns>true if integer else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsInteger(System.String,System.String)">
+            <summary>
+            Checks if specified string is an integer and optionally if it's greater than or less than zero
+            </summary>
+            <param name="Value"></param>
+            <param name="LessThanOrGreaterThanZero">+ for greater than zero, - for less than zero and null for any</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.FindDifferentcharInArray(System.String,System.String)">
+            <summary>
+            Finds ordinal position of 1st different char between two strings
+            </summary>
+            <param name="string1"></param>
+            <param name="string2"></param>
+            <returns>ordinal position of 1st different char between two strings or -1 if no differences found</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetArgsText(System.String[])">
+            <summary>
+            Used for combining arguments into a single string, for display usage
+            </summary>
+            <param name="args">args</param>
+            <returns>combined args</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RemoveDuplicatesFromArrayList(System.Collections.ArrayList,System.Boolean)">
+            <summary>
+            Remove Duplicates From Array List
+            </summary>
+            <param name="alOriginal">Original Arraylist</param>
+            <param name="bSort">if true will also sort array list</param>
+            <returns>ArrayList with any duplicates removed</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.AppendCharacterToEndOfString(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Appends a Character or string To End Of String
+            </summary>
+            <param name="strOriginal">original string</param>
+            <param name="strCharacter">character/string to append</param>
+            <param name="bAppendOnlyIfNotExist">if true, only appends if it doesn't already exist</param>
+            <param name="bExceptionsLoggedAsError">if true will log error when hitting exceptions (false by deafult)</param>/// 
+            <returns>Updated string</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DoesCsvContainValue(System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Checks if csvValues Contains value. When useDecimal is true, if 'csvValues' is '7,8' a 'value' of 7.1 will be considered present in csvValues 
+            </summary>
+            <param name="csvValues"></param>
+            <param name="value"></param>
+            <param name="ignoreCase"></param>
+            <param name="useDecimal"></param>
+            <returns>true if value exists in csv else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ConvertArrayListToCsv(System.Collections.ArrayList,System.String)">
+            <summary>
+            Converts data in an ArrayList To Csv Format
+            </summary>
+            <param name="List">list</param>
+            <param name="separator">separator character</param>
+            <returns>string containing ArrayList items  in csv format</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CompareArrays(System.Int32,System.String,System.String[])">
+            <summary>
+            Compares all the values of the array passed with the expected string passed
+            </summary>
+            <param name="nCountActualVal">tells the number of actual extended comments</param>
+            <param name="strExpectedVal">tells the expected value for comparision</param>
+            <param name="asActualVal">tells the array of actual extended comments</param>
+            <returns>Expected Extended Commnets array is returned</returns>
+            <remarks>Uses GenericMethods.m_nTestDataIndex setting to determine which test data xml value to use.</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetRandomNumbers(System.Int32,System.Int32)">
+            <summary>
+            Genarate Random number
+            </summary>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <returns>random no. as integer</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetRandomString(System.Int32)">
+            <summary>
+            Generate Random string values
+            </summary>
+            <param name="length">length of string</param>
+            <returns>random string values</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ExtractAbbreviation(System.String,System.Boolean)">
+            <summary>
+            Takes a string format that contains one dash and separate the output using split but output only 1 result based on bool abbreviation
+            e.g. Any format "CA - California", can return CA or California
+            </summary>
+            <param name="stringWithDash">string with one dash in between</param>
+            <param name="abbreviation">true will output only the left of dash: false will ouput right of dash</param>
+            <returns>the split string</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RoundingToTwoDecimal(System.String)">
+            <summary>
+            Convert numeric string to Decimal. Return zero if it's not numeric
+            </summary>
+            <param name="beforeTheRound">String value to be converted</param>
+            <returns>Decimal value of input string</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsNumberEven(System.Int32)">
+            <summary>
+            Checks if number passed is even or odd 
+            </summary>
+            <param name="value">number to check</param>
+            <returns>true if even number; false = odd number</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SetAppSettings(Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ApplicationTested,System.String,System.String,System.String)">
+            <summary>
+            Sets specified app settings
+            </summary>
+            <param name="application">DecisionPoint or Iep</param>
+            <param name="pathToAppSettingsFile">path To App Settings File e.g. DecisionPointe.exe.config or MMDataImporter.exe.config </param>
+            <param name="pathToTestConfigFile">Path To Test Config File</param>
+            <param name="xpathToAppSettings">xpath To AppSettings tag e.g. //CustomConfig/Environment/AppSettings/</param>
+            <remarks>Designed to be called within DPSharedTestAuto.SetEnvironmentVariables(), IEPSharedTestAuto.SetEnvironmentVariables() and similar</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ResetAppSettingsFile(System.String)">
+            <summary>
+            Backup And Restore App Settings file
+            </summary>
+            <param name="pathToAppSettingsFile">Path To App Settings File</param>
+            <returns>true if no issues else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SetAppSettingValues(System.String,System.String,System.String)">
+            <summary>
+            Set (or create) App Setting Values
+            </summary>
+            <param name="pathToTestConfigFile">Path To Test Config File</param>
+            <param name="xpathToAppSettings">xpath To AppSettings tag in test config file></param>
+            <param name="pathToAppSettingsFile">path To App Settings File</param>
+            <returns>true if no issues else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ConvertToTempTestDataPath(System.String,System.String)">
+            <summary>
+            Convert test data xml to Temp version for usage by tests so that it doesn't affect original and also handle sTestDataPath
+            </summary>
+            <param name="strOriginalTestDataFilePath"></param>
+            <param name="strPathToOutFile"></param>
+            <returns>path to temp test data file</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.LogProcessPrivateWorkingSet(System.String)">
+            <summary>
+            Logs Process Private Working Set
+            </summary>
+            <param name="processName"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.LogCPUAndMemoryUsage">
+            <summary>
+            Logs CPU And Memory Usage
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.KillProcesses(System.String,System.Boolean)">
+            <summary>
+            kills processes
+            </summary>
+            <param name="strProcessName">Name of process to kill</param>
+            <param name="secondTime">if false will attempt to kill process again if failing the first time</param>/// 
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetProcessId(System.String,System.Boolean)">
+            <summary>
+            Get process id and creation time
+            </summary>
+            <param name="strProcessName">Name of process to get id</param>
+            <param name="secondTime">if false and  will attempt to kill process again if failing the first time</param>/// 
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RunProcess(System.String,System.Boolean)">
+            <summary>
+            Use to run a batch or command file
+            </summary>
+            <param name="sPathToFile"></param>
+            <param name="bWaitForExit">if true call will wait until process ends before continueing</param>
+            <returns>ture if no error, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RunProcessCommand(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Runs Process Command
+            </summary>
+            <param name="pathToFile">path to cmd/batch file</param>
+            <param name="waitForExit">if ture waits for exit</param>
+            <param name="runMinimized">if true runs minized</param>
+            <returns>true if no error else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DoesServiceExist(System.String,System.String)">
+            <summary>
+            Checks if Service Exists
+            </summary>
+            <param name="strServiceName">ServiceName</param>
+            <param name="sMachineName">MachineName, if null uses controller machne name</param>
+            <returns>true if service exists else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.StopService(System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            Stops service
+            </summary>
+            <param name="strServiceName">Service Name</param>
+            <param name="timeoutMilliseconds">Max Number of Milliseconds to wait until services has restarted </param>
+            <param name="strMachineName">Name of machine to stop service on</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.StartService(System.String,System.Int32,System.String,System.Boolean,System.Int32)">
+            <summary>
+            Start/Restart the specified windows service, if service is already stopped then it will be started
+            </summary>
+            <param name="strServiceName">Service Name</param>
+            <param name="timeoutMilliseconds">Max Number of Milliseconds to wait until services has restarted </param>
+            <param name="strMachineName">Name of machin to start service on</param>
+            <param name="bRestartIfRunning">if true doesn't restart service if already running</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.StartService(System.String,System.String,System.Boolean,System.Int32)">
+            <summary>
+            Start / Pause / Continue the specified windows service, if service is already stopped then it will be started
+            </summary>
+            <param name="serviceName">Service Name</param>
+            <param name="machineName">Name of machin to start service on</param>
+            <param name="pauseIfRunning">if true doesn't restart service if already running</param>
+            <param name="retryCount"> </param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RestartService(System.String,System.String,System.Int32)">
+            <summary>
+            Restart Service
+            </summary>
+            <param name="serviceName">service Name</param>
+            <param name="machineName">machine Name</param>
+            <param name="retryCount">retry Count should it fail</param>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ConvertLocalPathToUnc(System.String,System.String)">
+            <summary>
+            Converts a full local path of string to a UNC path using specified machine name and root $ drive
+            </summary>
+            <param name="strLocalPath"></param>
+            <param name="strRemoteMachine"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetParentDirectoryPath(System.String)">
+            <summary>
+            Gets Parent Directory Path
+            </summary>
+            <param name="sPath">Path</param>
+            <returns>Parent Directory Path</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ValidateEventLogs(System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            Validates event logs
+            </summary>
+            <param name="dtFrom">date time and later that event log will queried</param>
+            <param name="sEventSource">Event source, default is null i.e. all sources e.g. MMDataImporter</param>
+            <param name="sLogType">Log type default=Application</param>
+            <param name="sEventEntryType">Event Type to look for default=Error</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CompareListItems(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            This function compares two list items without ordering.
+            </summary>
+            <param name="expectedListItems">Expected list item</param>
+            <param name="actualListItems">Actual list item</param>
+            <returns>true if successful, else false.</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.EmailMessage(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Sends an email message using specified parameters
+            </summary>
+            <param name="strFrom"></param>
+            <param name="strTo"></param>
+            <param name="strSubject"></param>
+            <param name="strBody"></param>
+            <param name="strAttachmentPath"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.EmailMessage(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Boolean,System.String)">
+            <summary>
+            Sends email message
+            </summary>
+            <param name="strFrom"></param>
+            <param name="strTo"></param>
+            <param name="strSubject"></param>
+            <param name="strBody"></param>
+            <param name="strAttachmentPath"></param>
+            <param name="nPriority">-1=low pri, 0=normal,1=high</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ConvertDataTable``1(System.Data.DataTable)">
+            <summary>
+            This converts datatable to desired data type list
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetItem``1(System.Data.DataRow)">
+            <summary>
+            This method gets item from datatable.
+            </summary>
+            <typeparam name="T">Type of the param required.</typeparam>
+            <param name="dr">data row</param>
+            <returns>retuns object of requested type</returns>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_CodeCoverageProfilingEnabled">
+            <summary>
+            Shared Dp Sql Connection String
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_bRunningPerformanceProfiling">
+            <summary>
+            If true indicates that test is being run with Performance Profiling
+            </summary>
+            <remarks>Value can be checked for but shouldn't be set directly in code. Running Performance Requires numerous settings in config file and thus value should be set through the config file.</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsPerformanceProfilingEnabled">
+            <summary>
+            Checks if Performance Profiling is Enabled
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.PerfProfilingRunCheck">
+            <summary>
+            helps to determine if perf profile enabled test should be executed
+            </summary>
+            <returns>true if OnlyIfPerformanceProfilingEnabled=true AND Performance Profiling is NOT Enabled()</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetDropThenInstrumentedBinaries(System.String[],System.String,System.String[])">
+            <summary>
+            Gets Drop Then Instrumente dBinaries
+            </summary>
+            <param name="sourceFolders">source folders</param>
+            <param name="destinationFolder">destination folder</param>
+            <param name="processesToStopBefore">processes to stop before getting the binaries</param>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.LogDictionaryKeysAndValues(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Logs dictionary key values for debugging purposes
+            </summary>
+            <param name="dictionary"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTestMachineExecutionInfo(System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Gets tfs related information about a machine that was used to run test automation
+            </summary>
+            <param name="tfsTeamUri"></param>
+            <param name="teamProjectName"></param>
+            <param name="testMachineName"></param>
+            <param name="secondsToWaitForTFSToUpdate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SaveMtmCoverageAttachment(System.String,Microsoft.TeamFoundation.TestManagement.Client.ITestRun)">
+            <summary>
+            Saves Code Coverage Attachment from an MTM run
+            </summary>
+            <param name="pathToSaveAttachment">path where we want to save the attachment</param>
+            <param name="mtmTestRun">MTM Test Run object</param>
+            <returns>true if no errors occured else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetBuildCoverageInfo(System.String,System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Get Build Coverage Info
+            </summary>
+            <param name="tfsTeamUri">tfs Team Uri</param>
+            <param name="teamProjectName">tfs team Project</param>
+            <param name="buildDefinition">buil dDefinition</param>
+            <param name="pathToFolderContainingCoverageFile">Path To Folder Containing Coverage File</param>
+            <param name="pathToDropFolderBin">Path To Drop Folder Bin</param>
+            <param name="buildNumber">buildNumber</param>
+            <param name="maxNumberOfDaysOldBuild">Max Number Of Days Old Build</param>
+            <returns>Dictionary containing the info</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetDiffAmount(System.String,System.String)">
+            <summary>
+            Gets Coverage Diff
+            </summary>
+            <param name="baselineValue">baseline Value</param>
+            <param name="newValue">new Value</param>
+            <returns>diff = new-baseline</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetListOfBuildCoverageBinaries(Microsoft.TeamFoundation.TestManagement.Client.ITestManagementTeamProject,System.String)">
+            <summary>
+            Gets List Of Build Coverage Binaries
+            </summary>
+            <param name="teamProject">teamProject</param>
+            <param name="buildURI">buildURI</param>
+            <returns>List Of Build Coverage Binaries</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsCodeCoverageProfilingEnabledPerTest(System.Boolean)">
+            <summary>
+            Checks if CodeCoverage Profiling is Enabled
+            </summary>
+            <returns>true if enabled else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.PerfProfileInitialize">
+            <summary>
+            Initializes performance profiling
+            </summary>
+            <remarks>Gets called at end of [TestInitialize]</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.InsertCodeCoverageSummary(System.String,System.String[],System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Inserts Code Coverage Summary into sql table
+            </summary>
+            <param name="testType"></param>
+            <param name="pathToCoverageFiles"></param>
+            <param name="applicationName"></param>
+            <param name="testName"></param>
+            <param name="buildNumber"></param>
+            <param name="numberOfTestsRun"></param>
+            <param name="numberOfTestsPassed"></param>
+            <param name="combinedCoverageIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SetApplicationBuildAndReportInfo(System.String,System.String,System.String)">
+            <summary>
+            Sets Application Build And Report Info
+            </summary>
+            <param name="applicationProfiled">Application profiled</param>
+            <param name="sPathToDecisionPointConfig">Path To DecisionPoint Config</param>
+            <param name="sPathToServerInsertTablesXml">Path To Server InsertTables Xml</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetProductBinaryFiles(System.String,System.String)">
+            <summary>
+            Gets Product Binary Files
+            </summary>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.FileCopyWithErrorHandling(System.String,System.String)">
+            <summary>
+            File Copy With Error Handling
+            </summary>
+            <param name="sourceFile">source file</param>
+            <param name="destinationFolder">destination folder</param>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RemoveFileAttribute(System.String,System.IO.FileAttributes)">
+            <summary>
+            Removes File Attribute
+            </summary>
+            <param name="pathToFile"></param>
+            <param name="attributes"></param>
+            <returns>true if no error else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.UpdateDpConfigFiles">
+            <summary>
+            Need to update each time binaries are update to reflect build number, DSN and TransportMethod
+            </summary>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CreateGotoCurrentDirectoryString(System.String)">
+            <summary>
+            Creates string to Goto specified (Current) Directory
+            </summary>
+            <param name="sPathToDirectory">Path To Directory</param>
+            <returns>string to goto specified directory, typically used by batch files</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.InstrumentBinaries(System.String,System.Boolean)">
+            <summary>
+            Creates bat file for instrumenting binaries then runs the bat file
+            </summary>
+            <returns>true if no error else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RunProcess(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Use to run a batch or command file
+            </summary>
+            <param name="sPathToFile"></param>
+            <param name="bWaitForExit">if true call will wait until process ends before continueing</param>
+            <param name="minimizeWindow">run minimized if true</param>
+            <returns>ture if no error, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetCheckinInfo(System.String,System.String,System.Boolean)">
+            <summary>
+            Gets Checkin Info
+            </summary>
+            <param name="sFunctionName"></param>
+            <param name="sCsvFile"></param>
+            <param name="bCheckParent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CreateCoverageReport(System.Int32,System.String,System.Boolean)">
+            <summary>
+            Create Code Coverage Report
+            </summary>
+            <param name="coverageId">Coverage Id</param>
+            <param name="sqlConnectionString">connection string</param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CreatePerformanceReportBody(System.Int32,System.Boolean,System.String,System.String,System.Boolean)">
+            <summary>
+            Used to create Performance Profile Report Body
+            </summary>
+            <param name="nIterationNumber">Test iteration #</param>
+            <param name="bPass">pass or fail</param>
+            <param name="sFunctionSummaryFile">file containing function to source mappings</param>
+            <param name="sFunctionalTestResult">if not null means there was a functional error in the test</param>
+            <param name="bDontIncludeFunctionDetailsWhenPass">if true FunctionDetails will not be sent in email report</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTopPerformanceDiffsTemp(System.Boolean,System.Decimal,System.String,System.String)">
+            <summary>
+            Gets top performance losses and gains and inserts the summaries into sdf
+            </summary>
+            <param name="bPass"></param>
+            <param name="dPercentDiff"></param>
+            <param name="strMessage"></param>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckPerformanceResults(System.Int32,System.Int64,System.String@,System.Decimal@)">
+            <summary>
+            Checks if performance results are within acceptable range
+            </summary>
+            <param name="nMaxPercentDiff"></param>
+            <param name="nCyclePerSecond"></param>
+            <param name="strMessage"></param>
+            <param name="dPercentChange"></param>
+            <returns>ture if performance acceptable else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.AnalyzePerformanceData(System.String)">
+            <summary>
+            Analyzes performance data and converts csv to sdf format
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.RunBatFile(System.String)">
+            <summary>
+            RuntBatFile
+            </summary>
+            <param name="sPathToBatFile">Bat file to run</param>
+            <returns>true if no errors encountered, else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.InstrumentedProcessesToEnd(System.String,System.String[])">
+            <summary>
+            Profile Processes To End before or after profiling
+            </summary>
+            <param name="PostOrPreProcessXPath">PostProcess or PreProcess</param>
+            <param name="listOfProcessesToKill">list of processes To Kill</param>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.PerfCreateReportAndCleanup(System.String)">
+            <summary>
+            Create and emails Perf Report (after selecting median result) And Cleanup
+            </summary>
+            <remarks>Gets called at end of [TestCleanup()]</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.TransformVspDiffReportForConsumption(System.String,System.Decimal,System.String,System.Int64)">
+            <summary>
+            Transform Vsp Diff Report For Consumption
+            </summary>
+            <param name="sPathToVspCsvReportFile"></param>
+            <param name="dThresholdPercent"></param>
+            <param name="strOutputPath"></param>
+            <param name="nMinDelta"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsFunctionOfInterest(System.String)">
+            <summary>
+            Check to see if function is one we want to report on
+            </summary>
+            <param name="sFunctionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetCodeCoverageSqlConnectionString">
+            <summary>
+            Get Code Coverage Sql Connection String
+            </summary>
+            <returns>Code Coverage Sql ConnectionString</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetPerformanceSqlConnectionString">
+            <summary>
+            Get Performance Sql ConnectionString
+            </summary>
+            <returns>PerformanceSqlConnectionString</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsProcessRunning(System.String)">
+            <summary>
+            Checks if process is running
+            </summary>
+            <param name="strProcessName">Name of process</param>
+            <returns>true if running else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WaitForProcessToStart(System.String,System.Int32)">
+            <summary>
+            Waits For Process To Start
+            </summary>
+            <param name="strProcessName">Process Name</param>
+            <param name="nMaxWaitSecondsToStart">Max Seconds To wait for Start</param>
+            <returns>true if started else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WaitForProcessToEnd(System.String,System.String,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Wait For Process To End
+            </summary>
+            <param name="strProcessName">Process Name</param>
+            <param name="sProcessTitle">Process Title</param>
+            <param name="nMaxWaitSecondsBeforeEnd">Max Seconds to Wait Before End</param>
+            <param name="bPartialTitleMatch">if true will perform a partial match of process title</param>
+            <param name="bCaseSensitiveTitleSearch">if true will perform Case Sensitive Title search</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WaitForProcessToEnd(System.String,System.Int32,System.Int32)">
+            <summary>
+            Wait For Process To End
+            </summary>
+            <param name="strProcessName">Process Name</param>
+            <param name="nMaxWaitSecondsBeforeEnd">Max Seconds to Wait Before End</param>
+            <param name="nMaxWaitSecondsToStart">Max Seconds to Wait for process to exist Before begining to wait for process to End</param>
+            <returns>true if process ended else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.TfsGetCheckinRange(System.DateTime,System.Collections.ArrayList,System.String)">
+            <summary>
+            Used to determine which checkins were marked as being reviewed and which weren't
+            </summary>
+            <param name="dtOldestDateTime"></param>
+            <param name="alBranchesToQueryFilePath"></param>
+            <param name="TeamProjectUri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.TfsGetChangeLatestCheckin(System.String,System.DateTime,System.Collections.ArrayList@,System.Collections.IEnumerable@,System.Int32,System.DateTime[])">
+            <summary>
+            Gets Latest TFS Checkin info
+            </summary>
+            <param name="strSourceFile">tfs source file</param>
+            <param name="dtOldestDateTime">Oldest date to go back and look for checkin info</param>
+            <param name="alBranchesToQueryFilePath">branches to query</param>
+            <param name="changesetlist">if not null then existing changeset list</param>
+            <param name="nMaxChangesetsToReturn">Max # of Changesets To Return</param>
+            <returns>checkin info</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.TfsGetChangeLatestCheckin(System.String,System.DateTime,System.Int32,System.DateTime[])">
+            <summary>
+            Gets Latest TFS Checkin info
+            </summary>
+            <param name="strSourceFile">tfs source file</param>
+            <param name="dtOldestDateTime">Oldest date to go back and look for checkin info</param>
+            <param name="nMaxChangesetsToReturn">Max # of Changesets To Return</param>
+            <returns>checkin info</returns>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_sPathToPrintTemp">
+            <summary>
+            Unused for now
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_alXpsBaselineImagePaths">
+            <summary>
+            list of paths to images extracted from Baseline xps in page number order obtained while call SaveXpsImages
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.m_alXpsActualImagePaths">
+            <summary>
+            list of paths to images extracted from Test  xps in page number order obtained while call SaveXpsImages
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetImageType(System.String)">
+            <summary>
+            Returns type of image
+            </summary>
+            <param name="sImageType">Image Type</param>
+            <returns>Image Type</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CompareImages(System.Drawing.Bitmap,System.Drawing.Bitmap,System.String)">
+            <summary>
+            Compares images using memcmp api
+            </summary>
+            <param name="bitmap1">1st bmp to compare</param>
+            <param name="bitmap2">2nd bmp to compare</param>
+            <param name="sImageName">Filename of image (used for logging)</param>
+            <returns>true if images compare else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SavePdfToImagesGS(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Save Pdf ToImages using Ghostscript
+            </summary>
+            <param name="baselineOrTestPdf">sBaselineOrTestPdf=BASELINE or ACTUAL</param>
+            <param name="pdfFileName">pdf FileName</param>
+            <param name="outFolder">path Out Folder</param>
+            <param name="imageType">Type of image</param>
+            <param name="ghostScriptPath">path to Ghostscript tool</param>
+            <returns>true if no errors save image files else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SaveXpsToImages(System.String,System.String,System.String,System.String)">
+            <summary>
+            Saves xps file to multiple one or more print images
+            </summary>
+            <param name="sBaselineOrTestXps">BASELINE or ACTUAL</param>
+            <param name="xpsFileName">path to xps file</param>
+            <param name="sOutFolder">path to folder where images will be output</param>
+            <param name="sImageType">Type of image</param>
+            <returns>true if no error else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetImagesFromXpsDocuments(System.String,System.String)">
+            <summary>
+            Get Images From Xps Documents and outputs them to location specified in data xml
+            </summary>
+            <param name="sPathToBaselineXps">Path To Baseline Xps</param>
+            <param name="sPathToActualXps">Path To Actual Xps</param>
+            <returns>true if no error else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.OCRValidations(Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DocumentType)">
+            <summary>
+            Gets values we want to retrieve for OCR based validations
+            </summary>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetPathToOcrExcludeXml(Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DocumentType)">
+            <summary>
+            Gets Path To Ocr Exclude Xml
+            </summary>
+            <param name="documentType">document type</param>
+            <returns>Path To Ocr Exclude Xml</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckOCRValue(System.String,System.String,Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DocumentType)">
+            <summary>
+            Performs OCR based validation and logs PASS, FAIL results
+            </summary>
+            <param name="sElement">field being validated</param>
+            <param name="sExpectedValue">expected value</param>
+            <param name="documentType">supported document Type</param>
+            <returns>true if no failures else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CompareOCRWithExpectedValue(System.String,System.String,System.Int32)">
+            <summary>
+            Performs comparisions of OCR retrieved values
+            </summary>
+            <param name="sOCRValue">OCR obtained Value</param>
+            <param name="sExpectedValue">Expected value</param>
+            <param name="nRepeatCount">Number of times to check for value within OCR text</param>
+            <returns>true if no failures else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetListOfExludedPoints(System.String,System.Int32)">
+            <summary>
+            Get List Of Exluded Points
+            </summary>
+            <param name="sPathToExclusionListXml">Path To ExclusionList Xml</param>
+            <param name="nPageNumber">page number</param>
+            <returns>array of excluded points</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetListOfExcludedRectangles(System.String,System.Int32)">
+            <summary>
+            Get List Of Exluded Points
+            </summary>
+            <param name="sPathToExclusionListXml">Path T oExclusion List Xml</param>
+            <param name="nPageNumber">Page number</param>/// 
+            <returns>array of excluded Rect's</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.IsPixelExcluded(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.Drawing.Point})">
+            <summary>
+            Determine if give coordinates are to be excluded from diff list
+            </summary>
+            <param name="x">x coordinate</param>
+            <param name="y">y coordinate</param>
+            <param name="arExcludedPixels">array of points that are to be exluded</param>
+            <returns>true if coordinates are to be excluded else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetTextFromExcludedImages(System.String,System.Collections.Generic.IEnumerable{System.Windows.Rect},System.Int32,System.String)">
+            <summary>
+            Gets Text From Excluded Images
+            </summary>
+            <param name="sPathToTestImage"></param>
+            <param name="aExcludedRectangles"></param>
+            <param name="nPageNumber"></param>
+            <param name="sExclusionXml"></param>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CompareDocuments(Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DocumentType,System.String,System.String)">
+            <summary>
+            Compares Documents
+            </summary>
+            <param name="documentType">DocumentType: PDF or XPS (default)</param>
+            <param name="sBaselineDoc">name of baseline document</param>
+            <param name="sActualDoc">name of actual document</param>
+            <returns></returns>
+            <remarks>PDF and XPS are currently supported. Calls CompareXpsDocuments()</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CompareXpsDocuments(System.String,System.String,Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DocumentType)">
+            <summary>
+            Compares Documents
+            </summary>
+            <param name="sBaselineXps">Baseline Xps, if null value will come from data xml</param>
+            <param name="sActualXps">Actual Xps, if null value will come from data xml</param>
+            <param name="documentType">PDF or XPS (default)</param>
+            <returns>true if no failures else false</returns>
+            <remarks>PDF and XPS are currently supported</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetListOfPagesToValidateUsingBitmapComparisons(System.Int32,Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.DocumentType)">
+            <summary>
+            Gets List Of Pages To Validate
+            <param name="pageCount">page Count of document or printout being validated</param>
+            <param name="documentType">type of document</param>
+            </summary>
+            <returns>list of pages to validate</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CompareImages(System.Drawing.Bitmap,System.Drawing.Bitmap,System.String,System.Int32,System.Windows.Rect[])">
+            <summary>
+            Compare Images Without Excluded Rectangles
+            </summary>
+            <param name="imageBaseline">Baseline image</param>
+            <param name="imageTest">Test image</param>
+            <param name="sBaselineImage">Baseline Image name</param>
+            <param name="nPageNumber">Page Number</param>
+            <param name="aExcludedRectangles">array of Excluded Rectangles</param>
+            <returns>true if images compare</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetImageRectangles(System.String,Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ImageType)">
+            <summary>
+            Get Image Rectangles
+            </summary>
+            <param name="sPathToBaselineImagesFolder">the path to folder containing multiple images </param>
+            <param name="ImageType">image extenstion e.g. PNG</param>
+            <returns>true if no error occured else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetImageRectangles(System.String)">
+            <summary>
+            Get images rectangles
+            </summary>
+            <param name="sPathToBaselineImage">path to image containing rectangles</param>
+            <returns>true if no error occured else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ComparePrintImages(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Compares Print(or any other) Images
+            </summary>
+            <param name="sBaselineImage">Baseline Image</param>
+            <param name="sTestImage">Test Image</param>
+            <param name="sExclusionXml">ExclusionXml</param>
+            <param name="nPageNumber">PageNumber</param>
+            <param name="nPixelTolerance">PixelTolerance</param>
+            <param name="nColorTolerance">ColorTolerance</param>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetExclusionRectangle(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Collections.IList,System.Collections.IList)">
+            <summary>
+            Gets Exclusion Rectangle corresponding to a set x-y arrraylists
+            </summary>
+            <param name="x0">start x</param>
+            <param name="y0">start y</param>
+            <param name="nWidth">width</param>
+            <param name="nHeight">height</param>
+            <param name="alRectX">x arrraylist</param>
+            <param name="alRectY">y arrraylist</param>
+            <returns>true if no errors encountered else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WriteDiffPixelsLog(System.Collections.IList,System.Collections.IList,System.String)">
+            <summary>
+            Write pixel coordinates of diffs
+            </summary>
+            <param name="alX">arraylist of x coordinates</param>
+            <param name="alY">arraylist of y coordinates</param>
+            <param name="sPathToDiffCoordinatesFile">path to output file</param>
+            <returns>true if no errors else false</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WriteExludedXml(System.Collections.IList,System.Collections.IList,System.Drawing.Bitmap,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Writes Exluded Xml TODO: temporary usage of text to create xml while working on schema, need to update code to use Linq
+            </summary>
+            <param name="alX"></param>
+            <param name="alY"></param>
+            <param name="imageBaseline"></param>
+            <param name="nPageNumber"></param>
+            <param name="sPathToDiffCoordinatesFile">File where output xml is written to</param>
+            <param name="bGetPixelsToExclude"></param>
+            <returns>true if no errors, else false</returns>
+            <remarks>output xmls from the various images need to combined into a single exclusion xml</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.WriteExludedXml(System.Collections.Generic.IEnumerable{System.Windows.Rect},System.Drawing.Image,System.String)">
+            <summary>
+            Write Exluded Xml
+            </summary>
+            <param name="rectExcludedRectangles">rectExcludedRectangles</param>
+            <param name="imageBaseline">imageBaseline</param>
+            <param name="sPathToImageFile">sPathToImageFile</param>
+            <returns>true if no error else false</returns>
+            <remarks>TODO: Update code to write xml using XDocument</remarks>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.GetImageText(System.String,System.Boolean)">
+            <summary>
+            Extracts text images from images using MODI OCR
+            </summary>
+            <param name="sPathToImage">path to image</param>
+            <param name="bPostProcessTextFromOCR">if true post processes retrieved text to remove spaces, tabs, new lines...</param>
+            <returns>text extracted</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.PostProcessOCRTextValue(System.String)">
+            <summary>
+            Post Processes OCR Text Value (removes tabs, spaces, new lines...)
+            </summary>
+            <param name="sOCRTextValue"></param>
+            <returns>Post Processed OCR Text Value</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.CheckTolerance(System.Int32,System.Int32,System.Drawing.Bitmap,System.Drawing.Bitmap,System.Int32,System.Int32)">
+            <summary>
+            Checks if given values are within specified tolerances
+            </summary>
+            <param name="X"></param>
+            <param name="Y"></param>
+            <param name="imageBaseline"></param>
+            <param name="imageTest"></param>
+            <param name="nPixelTolerance"></param>
+            <param name="nColorTolerance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.FetchDefaultPrinterName">
+            <summary>
+            Retrieves the Default Printer name
+            </summary>
+            <returns>Name of the default printer</returns>
+        </member>
+        <member name="M:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.SetDefaultPrinter(System.String)">
+            <summary>
+            Sets an installed printer to default system printer
+            </summary>
+            <param name="AvailablePrinterName">Name of the printer to be set as default system printer</param>
+            <returns>Success status - True/false</returns>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ApplicationTested">
+            <summary>
+            Enum used to specify application being tested e.g. used by SetAppSettings()
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.InstrumentationType">
+            <summary>
+            Instrumentation Type to be used
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ImageType">
+            <summary>
+            Icon indices match icons displayed in 
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ImageType.BMP">
+            <summary>
+            image extension as BMP
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ImageType.PNG">
+            <summary>
+            image extension as PNG
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ImageType.TIFF">
+            <summary>
+            image extension as TIFF
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.TestTools.TestAuto.LoggingAndSharedGenericMethods.ImageType.JPG">
+            <summary>
+            image extension as JPG
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.TestTools.TestAuto.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.TestAuto.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.TestAuto.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.TestTools.TestAuto.Properties.Resources.SharedFramework_Config">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+            &lt;TestConfig&gt;
+            
+            
+              &lt;Environment&gt;
+                &lt;Logging&gt;
+                  &lt;CustomLogPath&gt;\\medpd-dell1\AutoLogs&lt;/CustomLogPath&gt;
+                &lt;/Logging&gt;
+            
+                &lt;DecisionPointApplication disableAllPrecertificationPenalties=&quot;true&quot;&gt;
+                  &lt;BrowserUrl&gt;$PROCESS:[ENVIRONMENTVARIABLE,DPBrowserURL, http://vpd4-w3s5-003/SmokeTestSiteNew] &lt;/BrowserUrl&gt;
+                  &lt;ApplicationUrl&gt;$PROCESS:[ENVIRONMENTVARIABLE,DPApplicationURL, http://vpd4-w3s5-003/SmokeTestSiteNew/DPClient/DecisionPoint.application] &lt;/Appli [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+    </members>
+</doc>
